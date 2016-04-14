@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		143D07B51CBF99AE0091DFF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07B41CBF99AE0091DFF1 /* main.m */; };
+		143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07B71CBF99AE0091DFF1 /* AppDelegate.m */; };
+		143D07C01CBF99AE0091DFF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143D07BF1CBF99AE0091DFF1 /* Assets.xcassets */; };
+		143D07C31CBF99AE0091DFF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143D07C11CBF99AE0091DFF1 /* LaunchScreen.storyboard */; };
+		143D07CE1CBF99AF0091DFF1 /* DualMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07CD1CBF99AF0091DFF1 /* DualMobileTests.m */; };
+		143D07D91CBF99AF0091DFF1 /* DualMobileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07D81CBF99AF0091DFF1 /* DualMobileUITests.m */; };
+		143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D08021CBF9F580091DFF1 /* LoginViewController.m */; };
+		143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143D08031CBF9F580091DFF1 /* LoginViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		143D07CA1CBF99AF0091DFF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 143D07A81CBF99AE0091DFF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 143D07AF1CBF99AE0091DFF1;
+			remoteInfo = DualMobile;
+		};
+		143D07D51CBF99AF0091DFF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 143D07A81CBF99AE0091DFF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 143D07AF1CBF99AE0091DFF1;
+			remoteInfo = DualMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		143D07B01CBF99AE0091DFF1 /* DualMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DualMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		143D07B41CBF99AE0091DFF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		143D07B61CBF99AE0091DFF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		143D07B71CBF99AE0091DFF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		143D07BF1CBF99AE0091DFF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		143D07C21CBF99AE0091DFF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		143D07C41CBF99AF0091DFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		143D07C91CBF99AF0091DFF1 /* DualMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DualMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		143D07CD1CBF99AF0091DFF1 /* DualMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DualMobileTests.m; sourceTree = "<group>"; };
+		143D07CF1CBF99AF0091DFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		143D07D41CBF99AF0091DFF1 /* DualMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DualMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		143D07D81CBF99AF0091DFF1 /* DualMobileUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DualMobileUITests.m; sourceTree = "<group>"; };
+		143D07DA1CBF99AF0091DFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		143D08011CBF9F580091DFF1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		143D08021CBF9F580091DFF1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		143D08031CBF9F580091DFF1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		143D07AD1CBF99AE0091DFF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143D07C61CBF99AF0091DFF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143D07D11CBF99AF0091DFF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		143D07A71CBF99AE0091DFF1 = {
+			isa = PBXGroup;
+			children = (
+				143D07B21CBF99AE0091DFF1 /* DualMobile */,
+				143D07CC1CBF99AF0091DFF1 /* DualMobileTests */,
+				143D07D71CBF99AF0091DFF1 /* DualMobileUITests */,
+				143D07B11CBF99AE0091DFF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		143D07B11CBF99AE0091DFF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				143D07B01CBF99AE0091DFF1 /* DualMobile.app */,
+				143D07C91CBF99AF0091DFF1 /* DualMobileTests.xctest */,
+				143D07D41CBF99AF0091DFF1 /* DualMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		143D07B21CBF99AE0091DFF1 /* DualMobile */ = {
+			isa = PBXGroup;
+			children = (
+				143D07B61CBF99AE0091DFF1 /* AppDelegate.h */,
+				143D07B71CBF99AE0091DFF1 /* AppDelegate.m */,
+				143D07F11CBF9F580091DFF1 /* Classes */,
+				143D07B31CBF99AE0091DFF1 /* Supporting Files */,
+			);
+			path = DualMobile;
+			sourceTree = "<group>";
+		};
+		143D07B31CBF99AE0091DFF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				143D07C11CBF99AE0091DFF1 /* LaunchScreen.storyboard */,
+				143D07BF1CBF99AE0091DFF1 /* Assets.xcassets */,
+				143D07C41CBF99AF0091DFF1 /* Info.plist */,
+				143D07B41CBF99AE0091DFF1 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		143D07CC1CBF99AF0091DFF1 /* DualMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				143D07CD1CBF99AF0091DFF1 /* DualMobileTests.m */,
+				143D07CF1CBF99AF0091DFF1 /* Info.plist */,
+			);
+			path = DualMobileTests;
+			sourceTree = "<group>";
+		};
+		143D07D71CBF99AF0091DFF1 /* DualMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				143D07D81CBF99AF0091DFF1 /* DualMobileUITests.m */,
+				143D07DA1CBF99AF0091DFF1 /* Info.plist */,
+			);
+			path = DualMobileUITests;
+			sourceTree = "<group>";
+		};
+		143D07F11CBF9F580091DFF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				143D07FF1CBF9F580091DFF1 /* 登录 */,
+				143D07FB1CBF9F580091DFF1 /* 消息 */,
+				143D08061CBF9F580091DFF1 /* 联系人 */,
+				143D07F71CBF9F580091DFF1 /* 拨号 */,
+				143D07F31CBF9F580091DFF1 /* 我的 */,
+				143D07F21CBF9F580091DFF1 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		143D07F21CBF9F580091DFF1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		143D07F31CBF9F580091DFF1 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				143D07F41CBF9F580091DFF1 /* ControllView */,
+				143D07F51CBF9F580091DFF1 /* Model */,
+				143D07F61CBF9F580091DFF1 /* View */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		143D07F41CBF9F580091DFF1 /* ControllView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ControllView;
+			sourceTree = "<group>";
+		};
+		143D07F51CBF9F580091DFF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		143D07F61CBF9F580091DFF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		143D07F71CBF9F580091DFF1 /* 拨号 */ = {
+			isa = PBXGroup;
+			children = (
+				143D07F81CBF9F580091DFF1 /* ControllView */,
+				143D07F91CBF9F580091DFF1 /* Model */,
+				143D07FA1CBF9F580091DFF1 /* View */,
+			);
+			path = "拨号";
+			sourceTree = "<group>";
+		};
+		143D07F81CBF9F580091DFF1 /* ControllView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ControllView;
+			sourceTree = "<group>";
+		};
+		143D07F91CBF9F580091DFF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		143D07FA1CBF9F580091DFF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		143D07FB1CBF9F580091DFF1 /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				143D07FC1CBF9F580091DFF1 /* ControllView */,
+				143D07FD1CBF9F580091DFF1 /* Model */,
+				143D07FE1CBF9F580091DFF1 /* View */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		143D07FC1CBF9F580091DFF1 /* ControllView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ControllView;
+			sourceTree = "<group>";
+		};
+		143D07FD1CBF9F580091DFF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		143D07FE1CBF9F580091DFF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		143D07FF1CBF9F580091DFF1 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				143D08001CBF9F580091DFF1 /* ControllView */,
+				143D08041CBF9F580091DFF1 /* Model */,
+				143D08051CBF9F580091DFF1 /* View */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		143D08001CBF9F580091DFF1 /* ControllView */ = {
+			isa = PBXGroup;
+			children = (
+				143D08011CBF9F580091DFF1 /* LoginViewController.h */,
+				143D08021CBF9F580091DFF1 /* LoginViewController.m */,
+				143D08031CBF9F580091DFF1 /* LoginViewController.xib */,
+			);
+			path = ControllView;
+			sourceTree = "<group>";
+		};
+		143D08041CBF9F580091DFF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		143D08051CBF9F580091DFF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		143D08061CBF9F580091DFF1 /* 联系人 */ = {
+			isa = PBXGroup;
+			children = (
+				143D08071CBF9F580091DFF1 /* ControllView */,
+				143D08081CBF9F580091DFF1 /* Model */,
+				143D08091CBF9F580091DFF1 /* View */,
+			);
+			path = "联系人";
+			sourceTree = "<group>";
+		};
+		143D08071CBF9F580091DFF1 /* ControllView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ControllView;
+			sourceTree = "<group>";
+		};
+		143D08081CBF9F580091DFF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		143D08091CBF9F580091DFF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		143D07AF1CBF99AE0091DFF1 /* DualMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143D07DD1CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobile" */;
+			buildPhases = (
+				143D07AC1CBF99AE0091DFF1 /* Sources */,
+				143D07AD1CBF99AE0091DFF1 /* Frameworks */,
+				143D07AE1CBF99AE0091DFF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DualMobile;
+			productName = DualMobile;
+			productReference = 143D07B01CBF99AE0091DFF1 /* DualMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		143D07C81CBF99AF0091DFF1 /* DualMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143D07E01CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobileTests" */;
+			buildPhases = (
+				143D07C51CBF99AF0091DFF1 /* Sources */,
+				143D07C61CBF99AF0091DFF1 /* Frameworks */,
+				143D07C71CBF99AF0091DFF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				143D07CB1CBF99AF0091DFF1 /* PBXTargetDependency */,
+			);
+			name = DualMobileTests;
+			productName = DualMobileTests;
+			productReference = 143D07C91CBF99AF0091DFF1 /* DualMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		143D07D31CBF99AF0091DFF1 /* DualMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143D07E31CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobileUITests" */;
+			buildPhases = (
+				143D07D01CBF99AF0091DFF1 /* Sources */,
+				143D07D11CBF99AF0091DFF1 /* Frameworks */,
+				143D07D21CBF99AF0091DFF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				143D07D61CBF99AF0091DFF1 /* PBXTargetDependency */,
+			);
+			name = DualMobileUITests;
+			productName = DualMobileUITests;
+			productReference = 143D07D41CBF99AF0091DFF1 /* DualMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		143D07A81CBF99AE0091DFF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = QUAN;
+				TargetAttributes = {
+					143D07AF1CBF99AE0091DFF1 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					143D07C81CBF99AF0091DFF1 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 143D07AF1CBF99AE0091DFF1;
+					};
+					143D07D31CBF99AF0091DFF1 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 143D07AF1CBF99AE0091DFF1;
+					};
+				};
+			};
+			buildConfigurationList = 143D07AB1CBF99AE0091DFF1 /* Build configuration list for PBXProject "DualMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 143D07A71CBF99AE0091DFF1;
+			productRefGroup = 143D07B11CBF99AE0091DFF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				143D07AF1CBF99AE0091DFF1 /* DualMobile */,
+				143D07C81CBF99AF0091DFF1 /* DualMobileTests */,
+				143D07D31CBF99AF0091DFF1 /* DualMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		143D07AE1CBF99AE0091DFF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143D07C31CBF99AE0091DFF1 /* LaunchScreen.storyboard in Resources */,
+				143D07C01CBF99AE0091DFF1 /* Assets.xcassets in Resources */,
+				143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143D07C71CBF99AF0091DFF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143D07D21CBF99AF0091DFF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		143D07AC1CBF99AE0091DFF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */,
+				143D07B51CBF99AE0091DFF1 /* main.m in Sources */,
+				143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143D07C51CBF99AF0091DFF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143D07CE1CBF99AF0091DFF1 /* DualMobileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143D07D01CBF99AF0091DFF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143D07D91CBF99AF0091DFF1 /* DualMobileUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		143D07CB1CBF99AF0091DFF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 143D07AF1CBF99AE0091DFF1 /* DualMobile */;
+			targetProxy = 143D07CA1CBF99AF0091DFF1 /* PBXContainerItemProxy */;
+		};
+		143D07D61CBF99AF0091DFF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 143D07AF1CBF99AE0091DFF1 /* DualMobile */;
+			targetProxy = 143D07D51CBF99AF0091DFF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		143D07C11CBF99AE0091DFF1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143D07C21CBF99AE0091DFF1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		143D07DB1CBF99AF0091DFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		143D07DC1CBF99AF0091DFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		143D07DE1CBF99AF0091DFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/DualMobile/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		143D07DF1CBF99AF0091DFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/DualMobile/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		143D07E11CBF99AF0091DFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DualMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DualMobile.app/DualMobile";
+			};
+			name = Debug;
+		};
+		143D07E21CBF99AF0091DFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DualMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DualMobile.app/DualMobile";
+			};
+			name = Release;
+		};
+		143D07E41CBF99AF0091DFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DualMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DualMobile;
+			};
+			name = Debug;
+		};
+		143D07E51CBF99AF0091DFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DualMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DualMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		143D07AB1CBF99AE0091DFF1 /* Build configuration list for PBXProject "DualMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143D07DB1CBF99AF0091DFF1 /* Debug */,
+				143D07DC1CBF99AF0091DFF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		143D07DD1CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143D07DE1CBF99AF0091DFF1 /* Debug */,
+				143D07DF1CBF99AF0091DFF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		143D07E01CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143D07E11CBF99AF0091DFF1 /* Debug */,
+				143D07E21CBF99AF0091DFF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		143D07E31CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143D07E41CBF99AF0091DFF1 /* Debug */,
+				143D07E51CBF99AF0091DFF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 143D07A81CBF99AE0091DFF1 /* Project object */;
+}
