@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageViewController">
+            <connections>
+                <outlet property="messageTableView" destination="m0B-O9-hry" id="wy4-F7-SkQ"/>
+                <outlet property="searchView" destination="3Mn-3a-nZN" id="RSM-wU-KrP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="搜索" translatesAutoresizingMaskIntoConstraints="NO" id="3Mn-3a-nZN">
+                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="WK3-5u-2Bq"/>
+                    </constraints>
+                    <color key="tintColor" red="0.98039215690000003" green="0.4823529412" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m0B-O9-hry">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="m0B-O9-hry" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="14t-du-IwC"/>
+                <constraint firstAttribute="trailing" secondItem="m0B-O9-hry" secondAttribute="trailing" id="9Ay-Rk-deb"/>
+                <constraint firstAttribute="trailing" secondItem="3Mn-3a-nZN" secondAttribute="trailing" id="I1m-Qq-gDY"/>
+                <constraint firstItem="3Mn-3a-nZN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qlt-nw-UUk"/>
+                <constraint firstItem="3Mn-3a-nZN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="WrF-aj-ucY"/>
+                <constraint firstItem="m0B-O9-hry" firstAttribute="top" secondItem="3Mn-3a-nZN" secondAttribute="bottom" id="maD-p2-bR2"/>
+                <constraint firstAttribute="bottom" secondItem="m0B-O9-hry" secondAttribute="bottom" id="xIt-Xu-lYg"/>
+                <constraint firstItem="3Mn-3a-nZN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z5L-hc-gN5"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="477.5" y="407.5"/>
+        </view>
+    </objects>
+</document>

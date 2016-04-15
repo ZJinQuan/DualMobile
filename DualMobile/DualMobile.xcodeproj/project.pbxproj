@@ -15,6 +15,22 @@
 		143D07D91CBF99AF0091DFF1 /* DualMobileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07D81CBF99AF0091DFF1 /* DualMobileUITests.m */; };
 		143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D08021CBF9F580091DFF1 /* LoginViewController.m */; };
 		143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143D08031CBF9F580091DFF1 /* LoginViewController.xib */; };
+		14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892B1CC0798C00F65100 /* BaseViewController.m */; };
+		14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892E1CC07A3A00F65100 /* TabBarController.m */; };
+		14FF89331CC07D0D00F65100 /* RegisterViewContrller.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF89311CC07D0D00F65100 /* RegisterViewContrller.m */; };
+		14FF89341CC07D0D00F65100 /* RegisterViewContrller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF89321CC07D0D00F65100 /* RegisterViewContrller.xib */; };
+		14FF893A1CC09AC700F65100 /* ImportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF89381CC09AC700F65100 /* ImportViewController.m */; };
+		14FF893B1CC09AC700F65100 /* ImportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF89391CC09AC700F65100 /* ImportViewController.xib */; };
+		14FF893F1CC0BEF500F65100 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF893D1CC0BEF500F65100 /* MessageViewController.m */; };
+		14FF89401CC0BEF500F65100 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF893E1CC0BEF500F65100 /* MessageViewController.xib */; };
+		14FF89441CC0BF1F00F65100 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF89421CC0BF1F00F65100 /* ContactsViewController.m */; };
+		14FF89451CC0BF1F00F65100 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF89431CC0BF1F00F65100 /* ContactsViewController.xib */; };
+		14FF89491CC0BF5F00F65100 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF89471CC0BF5F00F65100 /* PhoneViewController.m */; };
+		14FF894A1CC0BF5F00F65100 /* PhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF89481CC0BF5F00F65100 /* PhoneViewController.xib */; };
+		14FF894E1CC0BF8100F65100 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF894C1CC0BF8100F65100 /* MainViewController.m */; };
+		14FF894F1CC0BF8100F65100 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF894D1CC0BF8100F65100 /* MainViewController.xib */; };
+		14FF89541CC0DFB300F65100 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF89521CC0DFB300F65100 /* MessageCell.m */; };
+		14FF89551CC0DFB300F65100 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FF89531CC0DFB300F65100 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +67,32 @@
 		143D08011CBF9F580091DFF1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		143D08021CBF9F580091DFF1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		143D08031CBF9F580091DFF1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		14FF89291CC0774400F65100 /* DualMobilePCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DualMobilePCH.pch; sourceTree = "<group>"; };
+		14FF892A1CC0798C00F65100 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		14FF892B1CC0798C00F65100 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		14FF892D1CC07A3A00F65100 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		14FF892E1CC07A3A00F65100 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		14FF89301CC07D0D00F65100 /* RegisterViewContrller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewContrller.h; sourceTree = "<group>"; };
+		14FF89311CC07D0D00F65100 /* RegisterViewContrller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewContrller.m; sourceTree = "<group>"; };
+		14FF89321CC07D0D00F65100 /* RegisterViewContrller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewContrller.xib; sourceTree = "<group>"; };
+		14FF89371CC09AC700F65100 /* ImportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportViewController.h; sourceTree = "<group>"; };
+		14FF89381CC09AC700F65100 /* ImportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportViewController.m; sourceTree = "<group>"; };
+		14FF89391CC09AC700F65100 /* ImportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportViewController.xib; sourceTree = "<group>"; };
+		14FF893C1CC0BEF500F65100 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		14FF893D1CC0BEF500F65100 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		14FF893E1CC0BEF500F65100 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		14FF89411CC0BF1F00F65100 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		14FF89421CC0BF1F00F65100 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		14FF89431CC0BF1F00F65100 /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		14FF89461CC0BF5F00F65100 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
+		14FF89471CC0BF5F00F65100 /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
+		14FF89481CC0BF5F00F65100 /* PhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneViewController.xib; sourceTree = "<group>"; };
+		14FF894B1CC0BF8100F65100 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		14FF894C1CC0BF8100F65100 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		14FF894D1CC0BF8100F65100 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		14FF89511CC0DFB300F65100 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		14FF89521CC0DFB300F65100 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		14FF89531CC0DFB300F65100 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +145,11 @@
 			children = (
 				143D07B61CBF99AE0091DFF1 /* AppDelegate.h */,
 				143D07B71CBF99AE0091DFF1 /* AppDelegate.m */,
+				14FF89291CC0774400F65100 /* DualMobilePCH.pch */,
+				14FF892A1CC0798C00F65100 /* BaseViewController.h */,
+				14FF892B1CC0798C00F65100 /* BaseViewController.m */,
+				14FF892D1CC07A3A00F65100 /* TabBarController.h */,
+				14FF892E1CC07A3A00F65100 /* TabBarController.m */,
 				143D07F11CBF9F580091DFF1 /* Classes */,
 				143D07B31CBF99AE0091DFF1 /* Supporting Files */,
 			);
@@ -171,6 +218,9 @@
 		143D07F41CBF9F580091DFF1 /* ControllView */ = {
 			isa = PBXGroup;
 			children = (
+				14FF894B1CC0BF8100F65100 /* MainViewController.h */,
+				14FF894C1CC0BF8100F65100 /* MainViewController.m */,
+				14FF894D1CC0BF8100F65100 /* MainViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -202,6 +252,9 @@
 		143D07F81CBF9F580091DFF1 /* ControllView */ = {
 			isa = PBXGroup;
 			children = (
+				14FF89461CC0BF5F00F65100 /* PhoneViewController.h */,
+				14FF89471CC0BF5F00F65100 /* PhoneViewController.m */,
+				14FF89481CC0BF5F00F65100 /* PhoneViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -233,6 +286,9 @@
 		143D07FC1CBF9F580091DFF1 /* ControllView */ = {
 			isa = PBXGroup;
 			children = (
+				14FF893C1CC0BEF500F65100 /* MessageViewController.h */,
+				14FF893D1CC0BEF500F65100 /* MessageViewController.m */,
+				14FF893E1CC0BEF500F65100 /* MessageViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -247,6 +303,9 @@
 		143D07FE1CBF9F580091DFF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				14FF89511CC0DFB300F65100 /* MessageCell.h */,
+				14FF89521CC0DFB300F65100 /* MessageCell.m */,
+				14FF89531CC0DFB300F65100 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +326,12 @@
 				143D08011CBF9F580091DFF1 /* LoginViewController.h */,
 				143D08021CBF9F580091DFF1 /* LoginViewController.m */,
 				143D08031CBF9F580091DFF1 /* LoginViewController.xib */,
+				14FF89301CC07D0D00F65100 /* RegisterViewContrller.h */,
+				14FF89311CC07D0D00F65100 /* RegisterViewContrller.m */,
+				14FF89321CC07D0D00F65100 /* RegisterViewContrller.xib */,
+				14FF89371CC09AC700F65100 /* ImportViewController.h */,
+				14FF89381CC09AC700F65100 /* ImportViewController.m */,
+				14FF89391CC09AC700F65100 /* ImportViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -298,6 +363,9 @@
 		143D08071CBF9F580091DFF1 /* ControllView */ = {
 			isa = PBXGroup;
 			children = (
+				14FF89411CC0BF1F00F65100 /* ContactsViewController.h */,
+				14FF89421CC0BF1F00F65100 /* ContactsViewController.m */,
+				14FF89431CC0BF1F00F65100 /* ContactsViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -383,6 +451,7 @@
 				TargetAttributes = {
 					143D07AF1CBF99AE0091DFF1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6DR4J97GQP;
 					};
 					143D07C81CBF99AF0091DFF1 = {
 						CreatedOnToolsVersion = 7.3;
@@ -419,9 +488,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FF89451CC0BF1F00F65100 /* ContactsViewController.xib in Resources */,
+				14FF894A1CC0BF5F00F65100 /* PhoneViewController.xib in Resources */,
+				14FF893B1CC09AC700F65100 /* ImportViewController.xib in Resources */,
 				143D07C31CBF99AE0091DFF1 /* LaunchScreen.storyboard in Resources */,
+				14FF894F1CC0BF8100F65100 /* MainViewController.xib in Resources */,
+				14FF89551CC0DFB300F65100 /* MessageCell.xib in Resources */,
+				14FF89401CC0BEF500F65100 /* MessageViewController.xib in Resources */,
 				143D07C01CBF99AE0091DFF1 /* Assets.xcassets in Resources */,
 				143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */,
+				14FF89341CC07D0D00F65100 /* RegisterViewContrller.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,9 +522,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FF894E1CC0BF8100F65100 /* MainViewController.m in Sources */,
+				14FF893A1CC09AC700F65100 /* ImportViewController.m in Sources */,
 				143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */,
+				14FF89331CC07D0D00F65100 /* RegisterViewContrller.m in Sources */,
+				14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */,
+				14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */,
 				143D07B51CBF99AE0091DFF1 /* main.m in Sources */,
+				14FF893F1CC0BEF500F65100 /* MessageViewController.m in Sources */,
+				14FF89441CC0BF1F00F65100 /* ContactsViewController.m in Sources */,
+				14FF89541CC0DFB300F65100 /* MessageCell.m in Sources */,
 				143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */,
+				14FF89491CC0BF5F00F65100 /* PhoneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,10 +666,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/QUAN/Desktop/Github/DualMobile/DualMobile/DualMobile/DualMobilePCH.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/DualMobile/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -592,10 +682,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/QUAN/Desktop/Github/DualMobile/DualMobile/DualMobile/DualMobilePCH.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/DualMobile/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.DualMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -664,6 +759,7 @@
 				143D07DF1CBF99AF0091DFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		143D07E01CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobileTests" */ = {
 			isa = XCConfigurationList;
@@ -672,6 +768,7 @@
 				143D07E21CBF99AF0091DFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		143D07E31CBF99AF0091DFF1 /* Build configuration list for PBXNativeTarget "DualMobileUITests" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +777,7 @@
 				143D07E51CBF99AF0091DFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

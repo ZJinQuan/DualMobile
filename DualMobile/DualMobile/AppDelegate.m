@@ -32,6 +32,8 @@
     
     [self.window makeKeyAndVisible];
     
+    [UIApplication sharedApplication].keyWindow.tintColor = RGB(241, 145, 73);
+    
     return YES;
 }
 

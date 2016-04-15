@@ -1,0 +1,17 @@
+//
+//  DualMobilePCH.pch
+//  DualMobile
+//
+//  Created by QUAN on 16/4/15.
+//  Copyright © 2016年 QUAN. All rights reserved.
+//
+
+#ifndef DualMobilePCH_pch
+#define DualMobilePCH_pch
+
+#define RGB(A, B, C) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
+
+#define kScreenWidth        [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight       [UIScreen mainScreen].bounds.size.height
+
+#endif

@@ -7,10 +7,14 @@
 //
 
 #import "LoginViewController.h"
+#import "RegisterViewContrller.h"
+#import "ImportViewController.h"
 
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UITextField *accountNum;
+@property (weak, nonatomic) IBOutlet UITextField *passWork;
 
 @end
 
@@ -19,24 +23,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    //注册按钮
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(registerItem)];
     
+    [rightBtn setTintColor:[UIColor blackColor]];
+    
+    [rightBtn setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
+    
+    self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//注册
+-(void) registerItem{
+    
+    RegisterViewContrller *registerVC = [[RegisterViewContrller alloc] init];
+    
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//登录
+- (IBAction)clickLoginBtn:(id)sender {
+    
+    if (self.accountNum.text.length < 1) {
+        NSLog(@"请输入手机号");
+    }else if (self.passWork.text.length < 1) {
+        NSLog(@"请输入密码");
+    }else{
+        
+    }
+    
+    ImportViewController *importVC = [[ImportViewController alloc] init];
+    
+    importVC.logId = @"登录成功";
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:importVC];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
 }
-*/
-
 @end
