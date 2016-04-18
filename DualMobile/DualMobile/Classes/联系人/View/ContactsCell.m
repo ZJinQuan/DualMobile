@@ -1,24 +1,27 @@
 //
-//  MessageCell.m
+//  ContactsCell.m
 //  DualMobile
 //
-//  Created by QUAN on 16/4/15.
+//  Created by QUAN on 16/4/18.
 //  Copyright © 2016年 QUAN. All rights reserved.
 //
 
-#import "MessageCell.h"
+#import "ContactsCell.h"
 
-@interface MessageCell ()
+@interface ContactsCell ()
 
 
 @end
 
-
-@implementation MessageCell
+@implementation ContactsCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+
+    
 }
+
+
 
 @end

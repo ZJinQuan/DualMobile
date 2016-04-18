@@ -39,6 +39,8 @@
     
     RegisterViewContrller *registerVC = [[RegisterViewContrller alloc] init];
     
+    registerVC.title = @"注册";
+    
     [self.navigationController pushViewController:registerVC animated:YES];
 }
 

@@ -10,6 +10,6 @@
 
 @interface MessageCell : UITableViewCell
 
-@property (nonatomic, copy) NSString *name;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

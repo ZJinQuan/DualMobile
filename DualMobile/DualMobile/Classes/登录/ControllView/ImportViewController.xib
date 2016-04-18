@@ -29,6 +29,9 @@
                             <integer key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="clickYesBtn:" destination="-1" eventType="touchUpInside" id="559-xE-tzB"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oIU-22-SYl">
                     <rect key="frame" x="8" y="293" width="359" height="40"/>

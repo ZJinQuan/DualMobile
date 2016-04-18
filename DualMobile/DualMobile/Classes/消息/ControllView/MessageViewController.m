@@ -104,6 +104,7 @@
     switch (_segmented.selectedSegmentIndex) {
         case 0:
             return 2;
+            
             break;
         case 1:
             return 1;
@@ -126,14 +127,19 @@
     switch (_segmented.selectedSegmentIndex) {
         case 0:
             
+            cell.nameLabel.text = @"张三";
+
             break;
         case 1:
-//            cell.name = @"李四";
+            cell.nameLabel.text = @"李四";
+            
             break;
             
         default:
             break;
     }
+    
+//
     
     return cell;
 }

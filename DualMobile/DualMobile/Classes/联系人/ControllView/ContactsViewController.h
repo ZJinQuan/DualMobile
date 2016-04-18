@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "AddressBookModel.h"
 
 @interface ContactsViewController : BaseViewController
+
+@property (strong, nonatomic) NSMutableArray *dataSource;/**<排序前的整个数据源*/
 
 @end

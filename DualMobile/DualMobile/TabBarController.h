@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddressBookModel.h"
 
 @interface TabBarController : UITabBarController
+
 
 @end
