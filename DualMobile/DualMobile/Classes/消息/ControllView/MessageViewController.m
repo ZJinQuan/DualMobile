@@ -8,6 +8,7 @@
 
 #import "MessageViewController.h"
 #import "MessageCell.h"
+#import "WriteNewsViewcontroller.h"
 
 @interface MessageViewController ()<UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchView;
@@ -22,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationController.navigationBar.translucent = NO;
+    
+    
     self.searchView.delegate = self;
     
     self.messageTableView.dataSource = self;
@@ -34,7 +38,7 @@
     //设置导航栏的按钮
     [self initNavBarBtn];
     
-    NSArray *segArr = [[NSArray alloc] initWithObjects:@"卡1",@"卡2", nil];
+    NSArray *segArr = [[NSArray alloc] initWithObjects:@"副卡1",@"副卡2", nil];
     
     
     
@@ -96,6 +100,15 @@
 
 -(void) clickWriteNews{
     NSLog(@"发消息");
+    
+    WriteNewsViewcontroller *writeVC = [[WriteNewsViewcontroller alloc] init];
+    
+    writeVC.title = @"新信息";
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:writeVC];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
+    
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource

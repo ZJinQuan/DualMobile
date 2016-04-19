@@ -49,8 +49,21 @@
     [self.view addSubview:self.friendTableView];
     [self.view addSubview:self.searchBar];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.dataSource = [NSMutableArray array];
+    self.addressBookTemp = [NSMutableArray array];
+    
+    [self.dataSource removeAllObjects];
+    [self.addressBookTemp removeAllObjects];
     
     
+    
+    [self ABAddressBook];
+    [self initData];
     
 }
 
@@ -220,7 +233,7 @@
 
 - (UITableView *)friendTableView {
     if (!_friendTableView) {
-        _friendTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, kScreenWidth, kScreenHeight-44) style:UITableViewStylePlain];
+        _friendTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.searchBar.height, kScreenWidth, kScreenHeight - 108) style:UITableViewStylePlain];
         _friendTableView.delegate = self;
         _friendTableView.dataSource = self;
         [_friendTableView registerNib:[UINib nibWithNibName:@"ContactsCell" bundle:nil] forCellReuseIdentifier:@"ContactsCell"];
@@ -230,7 +243,7 @@
 
 - (UISearchBar *)searchBar {
     if (!_searchBar) {
-        _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, 44)];
+        _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
         _searchBar.delegate = self;
         _searchBar.placeholder = @"搜索";
         _searchBar.showsCancelButton = NO;
@@ -293,6 +306,7 @@
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    
     if (!_isSearch) {
         cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
     }else{
@@ -300,23 +314,6 @@
     }
     return cell;
     
-//    NSString *cellIdentifier = @"ContactCell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//    
-//    if (cell == nil){
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-//    }
-//    
-//    AddressBookModel *book = [_addressBookTemp objectAtIndex:indexPath.row];
-//    
-//    cell.textLabel.text = book.name;
-//    
-//    NSLog(@"%@",book.name);
-//    
-//    cell.detailTextLabel.text = book.tel;
-//    
-//    return cell;
 
 }
 //索引点击事件

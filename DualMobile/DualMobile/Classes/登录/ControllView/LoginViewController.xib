@@ -291,6 +291,7 @@
                 <constraint firstItem="aLi-Hp-K5r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="yAa-B9-Bd6"/>
                 <constraint firstAttribute="bottom" secondItem="UFB-R1-8RG" secondAttribute="bottom" constant="42" id="z6Y-ES-7yp"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>

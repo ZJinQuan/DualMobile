@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "TabBarController.h"
 
 @interface AppDelegate ()
 
@@ -20,13 +21,16 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    LoginViewController *LoginVC = [[LoginViewController alloc] init];
-    
-    LoginVC.title = @"登录";
-    
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:LoginVC];
+//    LoginViewController *LoginVC = [[LoginViewController alloc] init];
+//    
+//    LoginVC.title = @"登录";
+//    
+//    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:LoginVC];
 
-    self.window.rootViewController = navVC;
+    TabBarController *tabVC = [[TabBarController alloc] init];
+    
+    
+    self.window.rootViewController = tabVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
     

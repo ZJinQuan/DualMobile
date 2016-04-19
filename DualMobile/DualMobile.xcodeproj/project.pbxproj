@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140F8A581CC5CCBA00118DE2 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140F8A571CC5CCBA00118DE2 /* KeyboardView.m */; };
+		140F8A5A1CC5CCCA00118DE2 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140F8A591CC5CCCA00118DE2 /* KeyboardView.xib */; };
+		140F8A5E1CC5E2A400118DE2 /* WriteNewsViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 140F8A5C1CC5E2A400118DE2 /* WriteNewsViewcontroller.m */; };
+		140F8A5F1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140F8A5D1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib */; };
 		1430180F1CC470E300004DE6 /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 143017FA1CC470E300004DE6 /* ChineseString.m */; };
 		143018101CC470E300004DE6 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 143017FB1CC470E300004DE6 /* pinyin.c */; };
 		143018111CC470E300004DE6 /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 143017FF1CC470E300004DE6 /* ChineseInclude.m */; };
@@ -35,6 +39,7 @@
 		143D07D91CBF99AF0091DFF1 /* DualMobileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07D81CBF99AF0091DFF1 /* DualMobileUITests.m */; };
 		143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D08021CBF9F580091DFF1 /* LoginViewController.m */; };
 		143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143D08031CBF9F580091DFF1 /* LoginViewController.xib */; };
+		14EC4D951CC61CFA005C80AC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EC4D941CC61CFA005C80AC /* UIView+Extension.m */; };
 		14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892B1CC0798C00F65100 /* BaseViewController.m */; };
 		14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892E1CC07A3A00F65100 /* TabBarController.m */; };
 		14FF89331CC07D0D00F65100 /* RegisterViewContrller.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF89311CC07D0D00F65100 /* RegisterViewContrller.m */; };
@@ -71,6 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140F8A561CC5CCBA00118DE2 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		140F8A571CC5CCBA00118DE2 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+		140F8A591CC5CCCA00118DE2 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		140F8A5B1CC5E2A400118DE2 /* WriteNewsViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteNewsViewcontroller.h; sourceTree = "<group>"; };
+		140F8A5C1CC5E2A400118DE2 /* WriteNewsViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteNewsViewcontroller.m; sourceTree = "<group>"; };
+		140F8A5D1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteNewsViewcontroller.xib; sourceTree = "<group>"; };
 		143017F91CC470E300004DE6 /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
 		143017FA1CC470E300004DE6 /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
 		143017FB1CC470E300004DE6 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
@@ -121,6 +132,8 @@
 		143D08011CBF9F580091DFF1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		143D08021CBF9F580091DFF1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		143D08031CBF9F580091DFF1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		14EC4D931CC61CFA005C80AC /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		14EC4D941CC61CFA005C80AC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		14FF89291CC0774400F65100 /* DualMobilePCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DualMobilePCH.pch; sourceTree = "<group>"; };
 		14FF892A1CC0798C00F65100 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		14FF892B1CC0798C00F65100 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -176,6 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140F8A601CC5E4A500118DE2 /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				14EC4D931CC61CFA005C80AC /* UIView+Extension.h */,
+				14EC4D941CC61CFA005C80AC /* UIView+Extension.m */,
+			);
+			path = "工具类";
+			sourceTree = "<group>";
+		};
 		143017F81CC470E300004DE6 /* LetterGroups */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +316,7 @@
 		143D07F21CBF9F580091DFF1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				140F8A601CC5E4A500118DE2 /* 工具类 */,
 				143017F81CC470E300004DE6 /* LetterGroups */,
 				143017FD1CC470E300004DE6 /* ZYPinYinSearchLib */,
 			);
@@ -364,6 +387,9 @@
 		143D07FA1CBF9F580091DFF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				140F8A561CC5CCBA00118DE2 /* KeyboardView.h */,
+				140F8A571CC5CCBA00118DE2 /* KeyboardView.m */,
+				140F8A591CC5CCCA00118DE2 /* KeyboardView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +410,9 @@
 				14FF893C1CC0BEF500F65100 /* MessageViewController.h */,
 				14FF893D1CC0BEF500F65100 /* MessageViewController.m */,
 				14FF893E1CC0BEF500F65100 /* MessageViewController.xib */,
+				140F8A5B1CC5E2A400118DE2 /* WriteNewsViewcontroller.h */,
+				140F8A5C1CC5E2A400118DE2 /* WriteNewsViewcontroller.m */,
+				140F8A5D1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -597,8 +626,10 @@
 				1430181E1CC4783F00004DE6 /* ContactsCell.xib in Resources */,
 				1430182F1CC4B6A600004DE6 /* ImportPerViewController.xib in Resources */,
 				14FF89451CC0BF1F00F65100 /* ContactsViewController.xib in Resources */,
+				140F8A5F1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib in Resources */,
 				143018231CC483C200004DE6 /* AddPeopleViewController.xib in Resources */,
 				143018181CC470E300004DE6 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				140F8A5A1CC5CCCA00118DE2 /* KeyboardView.xib in Resources */,
 				14FF894A1CC0BF5F00F65100 /* PhoneViewController.xib in Resources */,
 				14FF893B1CC09AC700F65100 /* ImportViewController.xib in Resources */,
 				143D07C31CBF99AE0091DFF1 /* LaunchScreen.storyboard in Resources */,
@@ -641,8 +672,10 @@
 				1430181D1CC4783F00004DE6 /* ContactsCell.m in Sources */,
 				143018111CC470E300004DE6 /* ChineseInclude.m in Sources */,
 				143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */,
+				14EC4D951CC61CFA005C80AC /* UIView+Extension.m in Sources */,
 				1430182A1CC4B16A00004DE6 /* AddressBookModel.m in Sources */,
 				143018191CC470E300004DE6 /* ZYPinYinSearch.m in Sources */,
+				140F8A5E1CC5E2A400118DE2 /* WriteNewsViewcontroller.m in Sources */,
 				143018161CC470E300004DE6 /* PinYinForObjc.m in Sources */,
 				143018121CC470E300004DE6 /* ChineseToPinyinResource.m in Sources */,
 				14FF89331CC07D0D00F65100 /* RegisterViewContrller.m in Sources */,
@@ -656,6 +689,7 @@
 				1430182E1CC4B6A600004DE6 /* ImportPerViewController.m in Sources */,
 				14FF89441CC0BF1F00F65100 /* ContactsViewController.m in Sources */,
 				14FF89541CC0DFB300F65100 /* MessageCell.m in Sources */,
+				140F8A581CC5CCBA00118DE2 /* KeyboardView.m in Sources */,
 				143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */,
 				14FF89491CC0BF5F00F65100 /* PhoneViewController.m in Sources */,
 			);

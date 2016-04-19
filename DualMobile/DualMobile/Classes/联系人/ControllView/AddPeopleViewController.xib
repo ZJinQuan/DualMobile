@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPeopleViewController">
             <connections>
+                <outlet property="firstName" destination="2KT-cW-ArJ" id="bmt-xu-fdX"/>
+                <outlet property="lastName" destination="6vg-7D-ifh" id="QYU-yW-BXQ"/>
+                <outlet property="phoneNum" destination="NXb-jE-dif" id="aMa-K2-d40"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNd-h5-mYh">
-                    <rect key="frame" x="0.0" y="64" width="375" height="95"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160418_1" translatesAutoresizingMaskIntoConstraints="NO" id="Xmv-h8-khC">
                             <rect key="frame" x="8" y="9" width="81" height="77"/>
@@ -74,7 +77,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuP-hM-rFB">
-                    <rect key="frame" x="0.0" y="233" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="169" width="375" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="存储位置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgz-JB-qi4">
                             <rect key="frame" x="8" y="8" width="74" height="28"/>
@@ -106,7 +109,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-Zh-Xhd">
-                    <rect key="frame" x="0.0" y="174" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="110" width="375" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-B5-CIv">
                             <rect key="frame" x="8" y="8" width="74" height="28"/>
@@ -117,12 +120,20 @@
                             <color key="textColor" red="0.98039215690000003" green="0.4823529412" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NXb-jE-dif">
+                            <rect key="frame" x="90" y="7" width="277" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NXb-jE-dif" secondAttribute="trailing" constant="8" id="6AC-5D-3zh"/>
                         <constraint firstItem="hEM-B5-CIv" firstAttribute="top" secondItem="ieb-Zh-Xhd" secondAttribute="top" constant="8" id="7Ei-Z8-eao"/>
                         <constraint firstAttribute="height" constant="44" id="NHS-Fi-6Dd"/>
                         <constraint firstItem="hEM-B5-CIv" firstAttribute="leading" secondItem="ieb-Zh-Xhd" secondAttribute="leading" constant="8" id="TAm-65-Z9C"/>
+                        <constraint firstItem="NXb-jE-dif" firstAttribute="leading" secondItem="hEM-B5-CIv" secondAttribute="trailing" constant="8" id="XHi-AG-PZd"/>
+                        <constraint firstItem="NXb-jE-dif" firstAttribute="centerY" secondItem="hEM-B5-CIv" secondAttribute="centerY" id="cU9-bh-FHV"/>
                         <constraint firstAttribute="bottom" secondItem="hEM-B5-CIv" secondAttribute="bottom" constant="8" id="dHa-ks-YAb"/>
                     </constraints>
                 </view>
@@ -131,7 +142,7 @@
             <constraints>
                 <constraint firstItem="HNd-h5-mYh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6ds-1l-Hbz"/>
                 <constraint firstAttribute="trailing" secondItem="HNd-h5-mYh" secondAttribute="trailing" id="7uu-mc-pms"/>
-                <constraint firstItem="HNd-h5-mYh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="GcI-3Q-x9q"/>
+                <constraint firstItem="HNd-h5-mYh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GcI-3Q-x9q"/>
                 <constraint firstItem="ieb-Zh-Xhd" firstAttribute="top" secondItem="HNd-h5-mYh" secondAttribute="bottom" constant="15" id="Glr-F6-xPM"/>
                 <constraint firstItem="nuP-hM-rFB" firstAttribute="top" secondItem="ieb-Zh-Xhd" secondAttribute="bottom" constant="15" id="Km3-eK-mbr"/>
                 <constraint firstItem="HNd-h5-mYh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M7Y-Jm-StM"/>
