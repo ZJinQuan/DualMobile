@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiv-mM-MWh">
-                        <rect key="frame" x="71" y="17" width="157" height="25"/>
+                        <rect key="frame" x="66" y="17" width="157" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="157" id="D1A-kY-PCz"/>
                             <constraint firstAttribute="height" constant="25" id="eFa-qq-NRZ"/>
@@ -35,14 +35,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160418_1" translatesAutoresizingMaskIntoConstraints="NO" id="w92-Hr-O0s">
-                        <rect key="frame" x="8" y="2" width="55" height="55"/>
+                        <rect key="frame" x="8" y="4.5" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="55" id="eQ7-JM-npZ"/>
-                            <constraint firstAttribute="width" constant="55" id="y1c-bp-rAW"/>
+                            <constraint firstAttribute="height" constant="50" id="eQ7-JM-npZ"/>
+                            <constraint firstAttribute="width" constant="50" id="y1c-bp-rAW"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="27"/>
+                                <integer key="value" value="25"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
@@ -58,6 +58,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="iconImage" destination="w92-Hr-O0s" id="WPz-nb-j7x"/>
                 <outlet property="nameLabel" destination="Yiv-mM-MWh" id="6Sd-HG-alI"/>
             </connections>
             <point key="canvasLocation" x="478" y="379"/>

@@ -28,7 +28,6 @@
 		143018231CC483C200004DE6 /* AddPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143018211CC483C200004DE6 /* AddPeopleViewController.xib */; };
 		143018251CC49A5000004DE6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143018241CC49A5000004DE6 /* AddressBook.framework */; };
 		143018271CC49A5D00004DE6 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143018261CC49A5D00004DE6 /* AddressBookUI.framework */; };
-		1430182A1CC4B16A00004DE6 /* AddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 143018291CC4B16A00004DE6 /* AddressBookModel.m */; };
 		1430182E1CC4B6A600004DE6 /* ImportPerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430182C1CC4B6A600004DE6 /* ImportPerViewController.m */; };
 		1430182F1CC4B6A600004DE6 /* ImportPerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1430182D1CC4B6A600004DE6 /* ImportPerViewController.xib */; };
 		143D07B51CBF99AE0091DFF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07B41CBF99AE0091DFF1 /* main.m */; };
@@ -39,6 +38,9 @@
 		143D07D91CBF99AF0091DFF1 /* DualMobileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D07D81CBF99AF0091DFF1 /* DualMobileUITests.m */; };
 		143D080A1CBF9F580091DFF1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D08021CBF9F580091DFF1 /* LoginViewController.m */; };
 		143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143D08031CBF9F580091DFF1 /* LoginViewController.xib */; };
+		14CD5A051CC719B700F83180 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CD5A031CC719B700F83180 /* DetailsViewController.m */; };
+		14CD5A061CC719B700F83180 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CD5A041CC719B700F83180 /* DetailsViewController.xib */; };
+		14CD5A091CC71AC400F83180 /* AddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CD5A081CC71AC400F83180 /* AddressBookModel.m */; };
 		14EC4D951CC61CFA005C80AC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EC4D941CC61CFA005C80AC /* UIView+Extension.m */; };
 		14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892B1CC0798C00F65100 /* BaseViewController.m */; };
 		14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892E1CC07A3A00F65100 /* TabBarController.m */; };
@@ -111,8 +113,6 @@
 		143018211CC483C200004DE6 /* AddPeopleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPeopleViewController.xib; sourceTree = "<group>"; };
 		143018241CC49A5000004DE6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		143018261CC49A5D00004DE6 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		143018281CC4B16A00004DE6 /* AddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookModel.h; sourceTree = "<group>"; };
-		143018291CC4B16A00004DE6 /* AddressBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookModel.m; sourceTree = "<group>"; };
 		1430182B1CC4B6A600004DE6 /* ImportPerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportPerViewController.h; sourceTree = "<group>"; };
 		1430182C1CC4B6A600004DE6 /* ImportPerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportPerViewController.m; sourceTree = "<group>"; };
 		1430182D1CC4B6A600004DE6 /* ImportPerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportPerViewController.xib; sourceTree = "<group>"; };
@@ -132,6 +132,11 @@
 		143D08011CBF9F580091DFF1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		143D08021CBF9F580091DFF1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		143D08031CBF9F580091DFF1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		14CD5A021CC719B700F83180 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		14CD5A031CC719B700F83180 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		14CD5A041CC719B700F83180 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		14CD5A071CC71AC400F83180 /* AddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookModel.h; sourceTree = "<group>"; };
+		14CD5A081CC71AC400F83180 /* AddressBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookModel.m; sourceTree = "<group>"; };
 		14EC4D931CC61CFA005C80AC /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		14EC4D941CC61CFA005C80AC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		14FF89291CC0774400F65100 /* DualMobilePCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DualMobilePCH.pch; sourceTree = "<group>"; };
@@ -466,8 +471,6 @@
 		143D08041CBF9F580091DFF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				143018281CC4B16A00004DE6 /* AddressBookModel.h */,
-				143018291CC4B16A00004DE6 /* AddressBookModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,6 +501,9 @@
 				1430181F1CC483C200004DE6 /* AddPeopleViewController.h */,
 				143018201CC483C200004DE6 /* AddPeopleViewController.m */,
 				143018211CC483C200004DE6 /* AddPeopleViewController.xib */,
+				14CD5A021CC719B700F83180 /* DetailsViewController.h */,
+				14CD5A031CC719B700F83180 /* DetailsViewController.m */,
+				14CD5A041CC719B700F83180 /* DetailsViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -505,6 +511,8 @@
 		143D08081CBF9F580091DFF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14CD5A071CC71AC400F83180 /* AddressBookModel.h */,
+				14CD5A081CC71AC400F83180 /* AddressBookModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -629,6 +637,7 @@
 				140F8A5F1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib in Resources */,
 				143018231CC483C200004DE6 /* AddPeopleViewController.xib in Resources */,
 				143018181CC470E300004DE6 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				14CD5A061CC719B700F83180 /* DetailsViewController.xib in Resources */,
 				140F8A5A1CC5CCCA00118DE2 /* KeyboardView.xib in Resources */,
 				14FF894A1CC0BF5F00F65100 /* PhoneViewController.xib in Resources */,
 				14FF893B1CC09AC700F65100 /* ImportViewController.xib in Resources */,
@@ -672,8 +681,8 @@
 				1430181D1CC4783F00004DE6 /* ContactsCell.m in Sources */,
 				143018111CC470E300004DE6 /* ChineseInclude.m in Sources */,
 				143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */,
+				14CD5A091CC71AC400F83180 /* AddressBookModel.m in Sources */,
 				14EC4D951CC61CFA005C80AC /* UIView+Extension.m in Sources */,
-				1430182A1CC4B16A00004DE6 /* AddressBookModel.m in Sources */,
 				143018191CC470E300004DE6 /* ZYPinYinSearch.m in Sources */,
 				140F8A5E1CC5E2A400118DE2 /* WriteNewsViewcontroller.m in Sources */,
 				143018161CC470E300004DE6 /* PinYinForObjc.m in Sources */,
@@ -684,6 +693,7 @@
 				14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */,
 				143D07B51CBF99AE0091DFF1 /* main.m in Sources */,
 				143018131CC470E300004DE6 /* HanyuPinyinOutputFormat.m in Sources */,
+				14CD5A051CC719B700F83180 /* DetailsViewController.m in Sources */,
 				14FF893F1CC0BEF500F65100 /* MessageViewController.m in Sources */,
 				1430180F1CC470E300004DE6 /* ChineseString.m in Sources */,
 				1430182E1CC4B6A600004DE6 /* ImportPerViewController.m in Sources */,

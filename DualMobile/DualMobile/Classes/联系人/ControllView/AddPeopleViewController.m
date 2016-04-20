@@ -29,7 +29,13 @@
 {
     
     if (self.firstName.text.length < 1 || self.lastName.text.length < 1) {
+        
         NSLog(@"请输入姓名");
+        
+    }else if (self.phoneNum.text.length < 1){
+        
+        NSLog(@"请输入电话");
+        
     }else{
         
         printf("--------addToContact----Execute!!!------\n");
@@ -50,21 +56,21 @@
         CFRelease(multiPhone);
         
         //email
-        ABMutableMultiValueRef multiEmail = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-        ABMultiValueAddValueAndLabel(multiEmail, @"johndoe@modelmetrics.com", kABWorkLabel, NULL);
-        ABRecordSetValue(newPerson, kABPersonEmailProperty, multiEmail, &error);
-        CFRelease(multiEmail);
+//        ABMutableMultiValueRef multiEmail = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+//        ABMultiValueAddValueAndLabel(multiEmail, @"johndoe@modelmetrics.com", kABWorkLabel, NULL);
+//        ABRecordSetValue(newPerson, kABPersonEmailProperty, multiEmail, &error);
+//        CFRelease(multiEmail);
         
         //address
-        ABMutableMultiValueRef multiAddress = ABMultiValueCreateMutable(kABMultiDictionaryPropertyType);
-        NSMutableDictionary *addressDictionary = [[NSMutableDictionary alloc] init];
-        [addressDictionary setObject:@"750 North Orleans Street, Ste 601" forKey:(NSString *) kABPersonAddressStreetKey];
-        [addressDictionary setObject:@"Chicago" forKey:(NSString *)kABPersonAddressCityKey];
-        [addressDictionary setObject:@"IL" forKey:(NSString *)kABPersonAddressStateKey];
-        [addressDictionary setObject:@"60654" forKey:(NSString *)kABPersonAddressZIPKey];
-        ABMultiValueAddValueAndLabel(multiAddress, (__bridge CFTypeRef)(addressDictionary), kABWorkLabel, NULL);
-        ABRecordSetValue(newPerson, kABPersonAddressProperty, multiAddress,&error);
-        CFRelease(multiAddress);
+//        ABMutableMultiValueRef multiAddress = ABMultiValueCreateMutable(kABMultiDictionaryPropertyType);
+//        NSMutableDictionary *addressDictionary = [[NSMutableDictionary alloc] init];
+//        [addressDictionary setObject:@"750 North Orleans Street, Ste 601" forKey:(NSString *) kABPersonAddressStreetKey];
+//        [addressDictionary setObject:@"Chicago" forKey:(NSString *)kABPersonAddressCityKey];
+//        [addressDictionary setObject:@"IL" forKey:(NSString *)kABPersonAddressStateKey];
+//        [addressDictionary setObject:@"60654" forKey:(NSString *)kABPersonAddressZIPKey];
+//        ABMultiValueAddValueAndLabel(multiAddress, (__bridge CFTypeRef)(addressDictionary), kABWorkLabel, NULL);
+//        ABRecordSetValue(newPerson, kABPersonAddressProperty, multiAddress,&error);
+//        CFRelease(multiAddress);
         
         ABAddressBookAddRecord(iPhoneAddressBook, newPerson, &error);
         ABAddressBookSave(iPhoneAddressBook, &error);

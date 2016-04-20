@@ -38,20 +38,6 @@
         
     }];
     
-//    if (kbSize.height == 225) {
-//        
-//       
-//    }
-//    else if(kbSize.height == 258){
-//        
-//        [UIView animateWithDuration:0.3f animations:^{
-//
-//        self.bottomLine.constant = kbSize.height;
-//        
-//        }];
-//    }
-//    
-    
 }
 
 //输入框编辑完成以后，将视图恢复到原始状态

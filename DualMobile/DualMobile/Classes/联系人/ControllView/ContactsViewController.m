@@ -13,6 +13,7 @@
 #import "AddPeopleViewController.h"
 #import <AddressBook/AddressBook.h>
 #import "AddressBookModel.h"
+#import "DetailsViewController.h"
 
 
 #define kColor [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1];
@@ -39,13 +40,6 @@
     
     [self initNavBarBtn];
     
-    self.dataSource = [NSMutableArray array];
-    self.addressBookTemp = [NSMutableArray array];
-    
-    [self ABAddressBook];
-    
-    [self initData];
-    
     [self.view addSubview:self.friendTableView];
     [self.view addSubview:self.searchBar];
     
@@ -57,14 +51,11 @@
     self.dataSource = [NSMutableArray array];
     self.addressBookTemp = [NSMutableArray array];
     
-    [self.dataSource removeAllObjects];
-    [self.addressBookTemp removeAllObjects];
-    
-    
-    
     [self ABAddressBook];
+    
     [self initData];
     
+    [_friendTableView reloadData];
 }
 
 -(void) ABAddressBook{
@@ -134,8 +125,6 @@
         [_dataSource addObject:nameString];
         
         NSLog(@"+++++++++%@",nameString);
-        
-//        [_dataSource addObject:nameString];
         
         addressBook.recordID = (int)ABRecordGetRecordID(person);;
         
@@ -223,11 +212,11 @@
 #pragma mark - Init
 - (void)initData {
     
-    _searchDataSource = [NSMutableArray new];
-    //获取索引的首字母
-    _indexDataSource = [ChineseString IndexArray:_dataSource];
-    //对原数据进行排序重新分组
-    _allDataSource = [ChineseString LetterSortArray:_dataSource];
+//    _searchDataSource = [NSMutableArray new];
+//    //获取索引的首字母
+//    _indexDataSource = [ChineseString IndexArray:_dataSource];
+//    //对原数据进行排序重新分组
+//    _allDataSource = [ChineseString LetterSortArray:_dataSource];
     
 }
 
@@ -253,51 +242,44 @@
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 
-////行数
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-////列数
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.addressBookTemp.count;
-//}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (!_isSearch) {
-        return _indexDataSource.count;
-    }else {
-        return 1;
-    }
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (!_isSearch) {
-        return [_allDataSource[section] count];
-    }else {
-        return _searchDataSource.count;
-    }
-}
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
 }
 
 //头部索引标题
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (!_isSearch) {
-        return _indexDataSource[section];
-    }else {
-        return nil;
-    }
-}
-//右侧索引列表
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    if (!_isSearch) {
-        return _indexDataSource;
-    }else {
-        return nil;
-    }
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    if (!_isSearch) {
+//        return _indexDataSource[section];
+//    }else {
+//        return nil;
+//    }
+//}
+
+////右侧索引列表
+//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+//    if (!_isSearch) {
+//        return _indexDataSource;
+//    }else {
+//        return nil;
+//    }
+//}
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    if (!_isSearch) {
+//        return _indexDataSource.count;
+//    }else {
+//        return 1;
+//    }
+//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    if (!_isSearch) {
+//        return [_allDataSource[section] count];
+//    }else {
+//        return _searchDataSource.count;
+//    }
+    
+    return _addressBookTemp.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -306,24 +288,48 @@
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    AddressBookModel *model = _addressBookTemp[indexPath.row];
+    
     
     if (!_isSearch) {
-        cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
+//        cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
+        cell.model = model;
+        
     }else{
-        cell.nameLabel.text = _searchDataSource[indexPath.row];
+//        cell.nameLabel.text = _searchDataSource[indexPath.row];
     }
     return cell;
     
 
 }
-//索引点击事件
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-    return index;
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    AddressBookModel *model = _addressBookTemp[indexPath.row];
+    
+    DetailsViewController *detailVC = [[DetailsViewController alloc] init];
+    
+    detailVC.model = model;
+    
+    detailVC.title = @"联系人详情";
+    
+    [detailVC setHidesBottomBarWhenPushed:YES];
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
 }
+
+//索引点击事件
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+//    [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//    return index;
+//}
+
+
 
 #pragma mark - UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
     [_searchDataSource removeAllObjects];
     NSArray *ary = [NSArray new];
     ary = [ZYPinYinSearch searchWithOriginalArray:_dataSource andSearchText:searchText andSearchByPropertyName:@"name"];
@@ -335,11 +341,13 @@
         [_searchDataSource addObjectsFromArray:ary];
     }
     [self.friendTableView reloadData];
+    
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     
     _searchBar.showsCancelButton = YES;
+    
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {

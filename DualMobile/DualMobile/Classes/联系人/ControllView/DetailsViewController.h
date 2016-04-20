@@ -1,17 +1,15 @@
 //
-//  ContactsCell.h
+//  DetailsViewController.h
 //  DualMobile
 //
-//  Created by QUAN on 16/4/18.
+//  Created by QUAN on 16/4/20.
 //  Copyright © 2016年 QUAN. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "AddressBookModel.h"
 
-@interface ContactsCell : UITableViewCell
-
-
+@interface DetailsViewController : BaseViewController
 
 @property (nonatomic, strong) AddressBookModel *model;
 
