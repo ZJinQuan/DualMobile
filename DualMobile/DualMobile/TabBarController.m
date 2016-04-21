@@ -24,7 +24,7 @@
     //添加至控制器
     [self addChildViewController:[[MessageViewController alloc] init] andTitle:@"消息" andImageName:@"btn_message" addSeledImage:@"btn_message_pre"];
     [self addChildViewController:[[ContactsViewController alloc] init] andTitle:@"联系人" andImageName:@"btn_people" addSeledImage:@"btn_people_pre"];
-    [self addChildViewController:[[PhoneViewController alloc] init] andTitle:@"拨号" andImageName:@"btn_call" addSeledImage:@"btn_callboard_pre"];
+    [self addChildViewController:[[PhoneViewController alloc] init] andTitle:@"拨号" andImageName:@"contact_call" addSeledImage:@"btn_callboard_pre"];
     [self addChildViewController:[[MainViewController alloc] init] andTitle:@"我的" andImageName:@"btn_my" addSeledImage:@"btn_my_pre"];
     
 }

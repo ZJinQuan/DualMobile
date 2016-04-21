@@ -41,6 +41,22 @@
 		14CD5A051CC719B700F83180 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CD5A031CC719B700F83180 /* DetailsViewController.m */; };
 		14CD5A061CC719B700F83180 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CD5A041CC719B700F83180 /* DetailsViewController.xib */; };
 		14CD5A091CC71AC400F83180 /* AddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CD5A081CC71AC400F83180 /* AddressBookModel.m */; };
+		14D822A21CC8BCC4008F7533 /* DeviceScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822A01CC8BCC4008F7533 /* DeviceScanViewController.m */; };
+		14D822A31CC8BCC4008F7533 /* DeviceScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822A11CC8BCC4008F7533 /* DeviceScanViewController.xib */; };
+		14D822A71CC8BCEE008F7533 /* TransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822A51CC8BCEE008F7533 /* TransferViewController.m */; };
+		14D822A81CC8BCEE008F7533 /* TransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822A61CC8BCEE008F7533 /* TransferViewController.xib */; };
+		14D822AC1CC8BD0E008F7533 /* VoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822AA1CC8BD0E008F7533 /* VoiceViewController.m */; };
+		14D822AD1CC8BD0E008F7533 /* VoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822AB1CC8BD0E008F7533 /* VoiceViewController.xib */; };
+		14D822B11CC8BD36008F7533 /* LanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822AF1CC8BD36008F7533 /* LanguageViewController.m */; };
+		14D822B21CC8BD36008F7533 /* LanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822B01CC8BD36008F7533 /* LanguageViewController.xib */; };
+		14D822B61CC8BD59008F7533 /* SecurityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822B41CC8BD59008F7533 /* SecurityViewController.m */; };
+		14D822B71CC8BD59008F7533 /* SecurityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822B51CC8BD59008F7533 /* SecurityViewController.xib */; };
+		14D822BB1CC8BD76008F7533 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822B91CC8BD76008F7533 /* GuideViewController.m */; };
+		14D822BC1CC8BD76008F7533 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822BA1CC8BD76008F7533 /* GuideViewController.xib */; };
+		14D822C01CC8BD9D008F7533 /* MoreSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822BE1CC8BD9D008F7533 /* MoreSetViewController.m */; };
+		14D822C11CC8BD9D008F7533 /* MoreSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822BF1CC8BD9D008F7533 /* MoreSetViewController.xib */; };
+		14D822C51CC8C2E3008F7533 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D822C31CC8C2E3008F7533 /* UserDetailsViewController.m */; };
+		14D822C61CC8C2E3008F7533 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D822C41CC8C2E3008F7533 /* UserDetailsViewController.xib */; };
 		14EC4D951CC61CFA005C80AC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EC4D941CC61CFA005C80AC /* UIView+Extension.m */; };
 		14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892B1CC0798C00F65100 /* BaseViewController.m */; };
 		14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF892E1CC07A3A00F65100 /* TabBarController.m */; };
@@ -137,6 +153,30 @@
 		14CD5A041CC719B700F83180 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		14CD5A071CC71AC400F83180 /* AddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookModel.h; sourceTree = "<group>"; };
 		14CD5A081CC71AC400F83180 /* AddressBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookModel.m; sourceTree = "<group>"; };
+		14D8229F1CC8BCC4008F7533 /* DeviceScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceScanViewController.h; sourceTree = "<group>"; };
+		14D822A01CC8BCC4008F7533 /* DeviceScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceScanViewController.m; sourceTree = "<group>"; };
+		14D822A11CC8BCC4008F7533 /* DeviceScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceScanViewController.xib; sourceTree = "<group>"; };
+		14D822A41CC8BCEE008F7533 /* TransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferViewController.h; sourceTree = "<group>"; };
+		14D822A51CC8BCEE008F7533 /* TransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferViewController.m; sourceTree = "<group>"; };
+		14D822A61CC8BCEE008F7533 /* TransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransferViewController.xib; sourceTree = "<group>"; };
+		14D822A91CC8BD0E008F7533 /* VoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewController.h; sourceTree = "<group>"; };
+		14D822AA1CC8BD0E008F7533 /* VoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewController.m; sourceTree = "<group>"; };
+		14D822AB1CC8BD0E008F7533 /* VoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceViewController.xib; sourceTree = "<group>"; };
+		14D822AE1CC8BD36008F7533 /* LanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageViewController.h; sourceTree = "<group>"; };
+		14D822AF1CC8BD36008F7533 /* LanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageViewController.m; sourceTree = "<group>"; };
+		14D822B01CC8BD36008F7533 /* LanguageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageViewController.xib; sourceTree = "<group>"; };
+		14D822B31CC8BD59008F7533 /* SecurityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityViewController.h; sourceTree = "<group>"; };
+		14D822B41CC8BD59008F7533 /* SecurityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityViewController.m; sourceTree = "<group>"; };
+		14D822B51CC8BD59008F7533 /* SecurityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityViewController.xib; sourceTree = "<group>"; };
+		14D822B81CC8BD76008F7533 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		14D822B91CC8BD76008F7533 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		14D822BA1CC8BD76008F7533 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		14D822BD1CC8BD9D008F7533 /* MoreSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreSetViewController.h; sourceTree = "<group>"; };
+		14D822BE1CC8BD9D008F7533 /* MoreSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreSetViewController.m; sourceTree = "<group>"; };
+		14D822BF1CC8BD9D008F7533 /* MoreSetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreSetViewController.xib; sourceTree = "<group>"; };
+		14D822C21CC8C2E3008F7533 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
+		14D822C31CC8C2E3008F7533 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
+		14D822C41CC8C2E3008F7533 /* UserDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailsViewController.xib; sourceTree = "<group>"; };
 		14EC4D931CC61CFA005C80AC /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		14EC4D941CC61CFA005C80AC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		14FF89291CC0774400F65100 /* DualMobilePCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DualMobilePCH.pch; sourceTree = "<group>"; };
@@ -344,6 +384,30 @@
 				14FF894B1CC0BF8100F65100 /* MainViewController.h */,
 				14FF894C1CC0BF8100F65100 /* MainViewController.m */,
 				14FF894D1CC0BF8100F65100 /* MainViewController.xib */,
+				14D822C21CC8C2E3008F7533 /* UserDetailsViewController.h */,
+				14D822C31CC8C2E3008F7533 /* UserDetailsViewController.m */,
+				14D822C41CC8C2E3008F7533 /* UserDetailsViewController.xib */,
+				14D8229F1CC8BCC4008F7533 /* DeviceScanViewController.h */,
+				14D822A01CC8BCC4008F7533 /* DeviceScanViewController.m */,
+				14D822A11CC8BCC4008F7533 /* DeviceScanViewController.xib */,
+				14D822A41CC8BCEE008F7533 /* TransferViewController.h */,
+				14D822A51CC8BCEE008F7533 /* TransferViewController.m */,
+				14D822A61CC8BCEE008F7533 /* TransferViewController.xib */,
+				14D822A91CC8BD0E008F7533 /* VoiceViewController.h */,
+				14D822AA1CC8BD0E008F7533 /* VoiceViewController.m */,
+				14D822AB1CC8BD0E008F7533 /* VoiceViewController.xib */,
+				14D822AE1CC8BD36008F7533 /* LanguageViewController.h */,
+				14D822AF1CC8BD36008F7533 /* LanguageViewController.m */,
+				14D822B01CC8BD36008F7533 /* LanguageViewController.xib */,
+				14D822B31CC8BD59008F7533 /* SecurityViewController.h */,
+				14D822B41CC8BD59008F7533 /* SecurityViewController.m */,
+				14D822B51CC8BD59008F7533 /* SecurityViewController.xib */,
+				14D822B81CC8BD76008F7533 /* GuideViewController.h */,
+				14D822B91CC8BD76008F7533 /* GuideViewController.m */,
+				14D822BA1CC8BD76008F7533 /* GuideViewController.xib */,
+				14D822BD1CC8BD9D008F7533 /* MoreSetViewController.h */,
+				14D822BE1CC8BD9D008F7533 /* MoreSetViewController.m */,
+				14D822BF1CC8BD9D008F7533 /* MoreSetViewController.xib */,
 			);
 			path = ControllView;
 			sourceTree = "<group>";
@@ -631,17 +695,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D822C61CC8C2E3008F7533 /* UserDetailsViewController.xib in Resources */,
+				14D822C11CC8BD9D008F7533 /* MoreSetViewController.xib in Resources */,
+				14D822A81CC8BCEE008F7533 /* TransferViewController.xib in Resources */,
 				1430181E1CC4783F00004DE6 /* ContactsCell.xib in Resources */,
 				1430182F1CC4B6A600004DE6 /* ImportPerViewController.xib in Resources */,
 				14FF89451CC0BF1F00F65100 /* ContactsViewController.xib in Resources */,
 				140F8A5F1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib in Resources */,
+				14D822B21CC8BD36008F7533 /* LanguageViewController.xib in Resources */,
+				14D822AD1CC8BD0E008F7533 /* VoiceViewController.xib in Resources */,
 				143018231CC483C200004DE6 /* AddPeopleViewController.xib in Resources */,
+				14D822B71CC8BD59008F7533 /* SecurityViewController.xib in Resources */,
 				143018181CC470E300004DE6 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				14CD5A061CC719B700F83180 /* DetailsViewController.xib in Resources */,
+				14D822A31CC8BCC4008F7533 /* DeviceScanViewController.xib in Resources */,
 				140F8A5A1CC5CCCA00118DE2 /* KeyboardView.xib in Resources */,
 				14FF894A1CC0BF5F00F65100 /* PhoneViewController.xib in Resources */,
 				14FF893B1CC09AC700F65100 /* ImportViewController.xib in Resources */,
 				143D07C31CBF99AE0091DFF1 /* LaunchScreen.storyboard in Resources */,
+				14D822BC1CC8BD76008F7533 /* GuideViewController.xib in Resources */,
 				14FF894F1CC0BF8100F65100 /* MainViewController.xib in Resources */,
 				14FF89551CC0DFB300F65100 /* MessageCell.xib in Resources */,
 				14FF89401CC0BEF500F65100 /* MessageViewController.xib in Resources */,
@@ -672,6 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D822C51CC8C2E3008F7533 /* UserDetailsViewController.m in Sources */,
 				143018101CC470E300004DE6 /* pinyin.c in Sources */,
 				143018221CC483C200004DE6 /* AddPeopleViewController.m in Sources */,
 				14FF894E1CC0BF8100F65100 /* MainViewController.m in Sources */,
@@ -679,6 +752,7 @@
 				143018171CC470E300004DE6 /* PinyinHelper.m in Sources */,
 				143018141CC470E300004DE6 /* NSString+PinYin4Cocoa.m in Sources */,
 				1430181D1CC4783F00004DE6 /* ContactsCell.m in Sources */,
+				14D822C01CC8BD9D008F7533 /* MoreSetViewController.m in Sources */,
 				143018111CC470E300004DE6 /* ChineseInclude.m in Sources */,
 				143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */,
 				14CD5A091CC71AC400F83180 /* AddressBookModel.m in Sources */,
@@ -686,16 +760,22 @@
 				143018191CC470E300004DE6 /* ZYPinYinSearch.m in Sources */,
 				140F8A5E1CC5E2A400118DE2 /* WriteNewsViewcontroller.m in Sources */,
 				143018161CC470E300004DE6 /* PinYinForObjc.m in Sources */,
+				14D822B11CC8BD36008F7533 /* LanguageViewController.m in Sources */,
 				143018121CC470E300004DE6 /* ChineseToPinyinResource.m in Sources */,
 				14FF89331CC07D0D00F65100 /* RegisterViewContrller.m in Sources */,
+				14D822BB1CC8BD76008F7533 /* GuideViewController.m in Sources */,
 				143018151CC470E300004DE6 /* PinyinFormatter.m in Sources */,
 				14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */,
 				14FF892F1CC07A3A00F65100 /* TabBarController.m in Sources */,
 				143D07B51CBF99AE0091DFF1 /* main.m in Sources */,
 				143018131CC470E300004DE6 /* HanyuPinyinOutputFormat.m in Sources */,
 				14CD5A051CC719B700F83180 /* DetailsViewController.m in Sources */,
+				14D822B61CC8BD59008F7533 /* SecurityViewController.m in Sources */,
 				14FF893F1CC0BEF500F65100 /* MessageViewController.m in Sources */,
+				14D822A71CC8BCEE008F7533 /* TransferViewController.m in Sources */,
+				14D822AC1CC8BD0E008F7533 /* VoiceViewController.m in Sources */,
 				1430180F1CC470E300004DE6 /* ChineseString.m in Sources */,
+				14D822A21CC8BCC4008F7533 /* DeviceScanViewController.m in Sources */,
 				1430182E1CC4B6A600004DE6 /* ImportPerViewController.m in Sources */,
 				14FF89441CC0BF1F00F65100 /* ContactsViewController.m in Sources */,
 				14FF89541CC0DFB300F65100 /* MessageCell.m in Sources */,

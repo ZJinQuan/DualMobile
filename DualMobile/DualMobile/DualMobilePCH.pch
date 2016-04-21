@@ -16,5 +16,7 @@
 #define kScreenHeight       [UIScreen mainScreen].bounds.size.height
 
 #import "UIView+Extension.h"
+
+#import "AppDelegate.h"
 #endif
 #endif
