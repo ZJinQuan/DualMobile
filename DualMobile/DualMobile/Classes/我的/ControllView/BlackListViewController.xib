@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlackListViewController">
             <connections>
-                <outlet property="transferView" destination="csb-4V-u0M" id="PEe-zE-YHw"/>
+                <outlet property="blackListView" destination="Tjx-8Y-VrT" id="PK4-0k-FfU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="csb-4V-u0M">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Tjx-8Y-VrT">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="csb-4V-u0M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AQS-rS-Vuy"/>
-                <constraint firstAttribute="trailing" secondItem="csb-4V-u0M" secondAttribute="trailing" id="IIU-1f-UEv"/>
-                <constraint firstAttribute="bottom" secondItem="csb-4V-u0M" secondAttribute="bottom" id="a7m-Df-sfL"/>
-                <constraint firstItem="csb-4V-u0M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ewP-PJ-CNa"/>
+                <constraint firstItem="Tjx-8Y-VrT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hak-m9-xpW"/>
+                <constraint firstAttribute="trailing" secondItem="Tjx-8Y-VrT" secondAttribute="trailing" id="VW7-eo-6yE"/>
+                <constraint firstAttribute="bottom" secondItem="Tjx-8Y-VrT" secondAttribute="bottom" id="gaU-3a-4oD"/>
+                <constraint firstItem="Tjx-8Y-VrT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ttH-ku-wRP"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>

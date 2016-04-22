@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1406A6531CC9FC12004E928A /* ChucklesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A6511CC9FC12004E928A /* ChucklesViewController.m */; };
+		1406A6541CC9FC12004E928A /* ChucklesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6521CC9FC12004E928A /* ChucklesViewController.xib */; };
+		1406A6581CC9FD5A004E928A /* BlackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A6561CC9FD5A004E928A /* BlackListViewController.m */; };
+		1406A6591CC9FD5A004E928A /* BlackListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6571CC9FD5A004E928A /* BlackListViewController.xib */; };
+		1406A65D1CCA1FD7004E928A /* MessageChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A65B1CCA1FD7004E928A /* MessageChatViewController.m */; };
+		1406A65E1CCA1FD7004E928A /* MessageChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A65C1CCA1FD7004E928A /* MessageChatViewController.xib */; };
+		1406A6711CCA2200004E928A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6601CCA2200004E928A /* image.png */; };
+		1406A6721CCA2200004E928A /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6611CCA2200004E928A /* photo.png */; };
+		1406A6731CCA2200004E928A /* photo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6621CCA2200004E928A /* photo1.png */; };
+		1406A6741CCA2200004E928A /* photo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6631CCA2200004E928A /* photo1@2x.png */; };
+		1406A6751CCA2200004E928A /* photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6641CCA2200004E928A /* photo@2x.png */; };
+		1406A6761CCA2200004E928A /* ReceiverTextNodeBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6651CCA2200004E928A /* ReceiverTextNodeBkg.png */; };
+		1406A6771CCA2200004E928A /* ReceiverTextNodeBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6661CCA2200004E928A /* ReceiverTextNodeBkg@2x.png */; };
+		1406A6781CCA2200004E928A /* ReceiverVoiceNodeDownloading.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6671CCA2200004E928A /* ReceiverVoiceNodeDownloading.png */; };
+		1406A6791CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6681CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png */; };
+		1406A67A1CCA2200004E928A /* ReceiverVoiceNodePlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6691CCA2200004E928A /* ReceiverVoiceNodePlaying.png */; };
+		1406A67B1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66A1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png */; };
+		1406A67C1CCA2200004E928A /* SenderAppNodeBkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66B1CCA2200004E928A /* SenderAppNodeBkg_HL.png */; };
+		1406A67D1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66C1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png */; };
+		1406A67E1CCA2200004E928A /* SenderVoiceNodeDownloading.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66D1CCA2200004E928A /* SenderVoiceNodeDownloading.png */; };
+		1406A67F1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66E1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png */; };
+		1406A6801CCA2200004E928A /* SenderVoiceNodePlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66F1CCA2200004E928A /* SenderVoiceNodePlaying.png */; };
+		1406A6811CCA2200004E928A /* SenderVoiceNodePlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6701CCA2200004E928A /* SenderVoiceNodePlaying@2x.png */; };
+		1406A6851CCA2C39004E928A /* MessageChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A6831CCA2C39004E928A /* MessageChatCell.m */; };
+		1406A6861CCA2C39004E928A /* MessageChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6841CCA2C39004E928A /* MessageChatCell.xib */; };
 		140F8A581CC5CCBA00118DE2 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140F8A571CC5CCBA00118DE2 /* KeyboardView.m */; };
 		140F8A5A1CC5CCCA00118DE2 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140F8A591CC5CCCA00118DE2 /* KeyboardView.xib */; };
 		140F8A5E1CC5E2A400118DE2 /* WriteNewsViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 140F8A5C1CC5E2A400118DE2 /* WriteNewsViewcontroller.m */; };
@@ -94,6 +119,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1406A6501CC9FC12004E928A /* ChucklesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChucklesViewController.h; sourceTree = "<group>"; };
+		1406A6511CC9FC12004E928A /* ChucklesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChucklesViewController.m; sourceTree = "<group>"; };
+		1406A6521CC9FC12004E928A /* ChucklesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChucklesViewController.xib; sourceTree = "<group>"; };
+		1406A6551CC9FD5A004E928A /* BlackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackListViewController.h; sourceTree = "<group>"; };
+		1406A6561CC9FD5A004E928A /* BlackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackListViewController.m; sourceTree = "<group>"; };
+		1406A6571CC9FD5A004E928A /* BlackListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlackListViewController.xib; sourceTree = "<group>"; };
+		1406A65A1CCA1FD7004E928A /* MessageChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageChatViewController.h; sourceTree = "<group>"; };
+		1406A65B1CCA1FD7004E928A /* MessageChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageChatViewController.m; sourceTree = "<group>"; };
+		1406A65C1CCA1FD7004E928A /* MessageChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageChatViewController.xib; sourceTree = "<group>"; };
+		1406A6601CCA2200004E928A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		1406A6611CCA2200004E928A /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		1406A6621CCA2200004E928A /* photo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo1.png; sourceTree = "<group>"; };
+		1406A6631CCA2200004E928A /* photo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo1@2x.png"; sourceTree = "<group>"; };
+		1406A6641CCA2200004E928A /* photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@2x.png"; sourceTree = "<group>"; };
+		1406A6651CCA2200004E928A /* ReceiverTextNodeBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverTextNodeBkg.png; sourceTree = "<group>"; };
+		1406A6661CCA2200004E928A /* ReceiverTextNodeBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverTextNodeBkg@2x.png"; sourceTree = "<group>"; };
+		1406A6671CCA2200004E928A /* ReceiverVoiceNodeDownloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverVoiceNodeDownloading.png; sourceTree = "<group>"; };
+		1406A6681CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodeDownloading@2x.png"; sourceTree = "<group>"; };
+		1406A6691CCA2200004E928A /* ReceiverVoiceNodePlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverVoiceNodePlaying.png; sourceTree = "<group>"; };
+		1406A66A1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying@2x.png"; sourceTree = "<group>"; };
+		1406A66B1CCA2200004E928A /* SenderAppNodeBkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderAppNodeBkg_HL.png; sourceTree = "<group>"; };
+		1406A66C1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderAppNodeBkg_HL@2x.png"; sourceTree = "<group>"; };
+		1406A66D1CCA2200004E928A /* SenderVoiceNodeDownloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderVoiceNodeDownloading.png; sourceTree = "<group>"; };
+		1406A66E1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodeDownloading@2x.png"; sourceTree = "<group>"; };
+		1406A66F1CCA2200004E928A /* SenderVoiceNodePlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderVoiceNodePlaying.png; sourceTree = "<group>"; };
+		1406A6701CCA2200004E928A /* SenderVoiceNodePlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying@2x.png"; sourceTree = "<group>"; };
+		1406A6821CCA2C39004E928A /* MessageChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageChatCell.h; sourceTree = "<group>"; };
+		1406A6831CCA2C39004E928A /* MessageChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageChatCell.m; sourceTree = "<group>"; };
+		1406A6841CCA2C39004E928A /* MessageChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageChatCell.xib; sourceTree = "<group>"; };
 		140F8A561CC5CCBA00118DE2 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
 		140F8A571CC5CCBA00118DE2 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
 		140F8A591CC5CCCA00118DE2 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
@@ -234,6 +288,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1406A65F1CCA2200004E928A /* image */ = {
+			isa = PBXGroup;
+			children = (
+				1406A6601CCA2200004E928A /* image.png */,
+				1406A6611CCA2200004E928A /* photo.png */,
+				1406A6621CCA2200004E928A /* photo1.png */,
+				1406A6631CCA2200004E928A /* photo1@2x.png */,
+				1406A6641CCA2200004E928A /* photo@2x.png */,
+				1406A6651CCA2200004E928A /* ReceiverTextNodeBkg.png */,
+				1406A6661CCA2200004E928A /* ReceiverTextNodeBkg@2x.png */,
+				1406A6671CCA2200004E928A /* ReceiverVoiceNodeDownloading.png */,
+				1406A6681CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png */,
+				1406A6691CCA2200004E928A /* ReceiverVoiceNodePlaying.png */,
+				1406A66A1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png */,
+				1406A66B1CCA2200004E928A /* SenderAppNodeBkg_HL.png */,
+				1406A66C1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png */,
+				1406A66D1CCA2200004E928A /* SenderVoiceNodeDownloading.png */,
+				1406A66E1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png */,
+				1406A66F1CCA2200004E928A /* SenderVoiceNodePlaying.png */,
+				1406A6701CCA2200004E928A /* SenderVoiceNodePlaying@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		140F8A601CC5E4A500118DE2 /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +480,12 @@
 				14D822B31CC8BD59008F7533 /* SecurityViewController.h */,
 				14D822B41CC8BD59008F7533 /* SecurityViewController.m */,
 				14D822B51CC8BD59008F7533 /* SecurityViewController.xib */,
+				1406A6501CC9FC12004E928A /* ChucklesViewController.h */,
+				1406A6511CC9FC12004E928A /* ChucklesViewController.m */,
+				1406A6521CC9FC12004E928A /* ChucklesViewController.xib */,
+				1406A6551CC9FD5A004E928A /* BlackListViewController.h */,
+				1406A6561CC9FD5A004E928A /* BlackListViewController.m */,
+				1406A6571CC9FD5A004E928A /* BlackListViewController.xib */,
 				14D822B81CC8BD76008F7533 /* GuideViewController.h */,
 				14D822B91CC8BD76008F7533 /* GuideViewController.m */,
 				14D822BA1CC8BD76008F7533 /* GuideViewController.xib */,
@@ -466,6 +550,7 @@
 		143D07FB1CBF9F580091DFF1 /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
+				1406A65F1CCA2200004E928A /* image */,
 				143D07FC1CBF9F580091DFF1 /* ControllView */,
 				143D07FD1CBF9F580091DFF1 /* Model */,
 				143D07FE1CBF9F580091DFF1 /* View */,
@@ -479,6 +564,9 @@
 				14FF893C1CC0BEF500F65100 /* MessageViewController.h */,
 				14FF893D1CC0BEF500F65100 /* MessageViewController.m */,
 				14FF893E1CC0BEF500F65100 /* MessageViewController.xib */,
+				1406A65A1CCA1FD7004E928A /* MessageChatViewController.h */,
+				1406A65B1CCA1FD7004E928A /* MessageChatViewController.m */,
+				1406A65C1CCA1FD7004E928A /* MessageChatViewController.xib */,
 				140F8A5B1CC5E2A400118DE2 /* WriteNewsViewcontroller.h */,
 				140F8A5C1CC5E2A400118DE2 /* WriteNewsViewcontroller.m */,
 				140F8A5D1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib */,
@@ -499,6 +587,9 @@
 				14FF89511CC0DFB300F65100 /* MessageCell.h */,
 				14FF89521CC0DFB300F65100 /* MessageCell.m */,
 				14FF89531CC0DFB300F65100 /* MessageCell.xib */,
+				1406A6821CCA2C39004E928A /* MessageChatCell.h */,
+				1406A6831CCA2C39004E928A /* MessageChatCell.m */,
+				1406A6841CCA2C39004E928A /* MessageChatCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -695,20 +786,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1406A67F1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png in Resources */,
+				1406A6711CCA2200004E928A /* image.png in Resources */,
 				14D822C61CC8C2E3008F7533 /* UserDetailsViewController.xib in Resources */,
+				1406A6721CCA2200004E928A /* photo.png in Resources */,
 				14D822C11CC8BD9D008F7533 /* MoreSetViewController.xib in Resources */,
 				14D822A81CC8BCEE008F7533 /* TransferViewController.xib in Resources */,
+				1406A6741CCA2200004E928A /* photo1@2x.png in Resources */,
+				1406A6861CCA2C39004E928A /* MessageChatCell.xib in Resources */,
+				1406A6591CC9FD5A004E928A /* BlackListViewController.xib in Resources */,
 				1430181E1CC4783F00004DE6 /* ContactsCell.xib in Resources */,
 				1430182F1CC4B6A600004DE6 /* ImportPerViewController.xib in Resources */,
+				1406A6801CCA2200004E928A /* SenderVoiceNodePlaying.png in Resources */,
+				1406A67C1CCA2200004E928A /* SenderAppNodeBkg_HL.png in Resources */,
 				14FF89451CC0BF1F00F65100 /* ContactsViewController.xib in Resources */,
 				140F8A5F1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib in Resources */,
 				14D822B21CC8BD36008F7533 /* LanguageViewController.xib in Resources */,
+				1406A6541CC9FC12004E928A /* ChucklesViewController.xib in Resources */,
+				1406A65E1CCA1FD7004E928A /* MessageChatViewController.xib in Resources */,
 				14D822AD1CC8BD0E008F7533 /* VoiceViewController.xib in Resources */,
 				143018231CC483C200004DE6 /* AddPeopleViewController.xib in Resources */,
+				1406A6811CCA2200004E928A /* SenderVoiceNodePlaying@2x.png in Resources */,
+				1406A6781CCA2200004E928A /* ReceiverVoiceNodeDownloading.png in Resources */,
 				14D822B71CC8BD59008F7533 /* SecurityViewController.xib in Resources */,
+				1406A67A1CCA2200004E928A /* ReceiverVoiceNodePlaying.png in Resources */,
 				143018181CC470E300004DE6 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				14CD5A061CC719B700F83180 /* DetailsViewController.xib in Resources */,
+				1406A6791CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png in Resources */,
 				14D822A31CC8BCC4008F7533 /* DeviceScanViewController.xib in Resources */,
+				1406A67E1CCA2200004E928A /* SenderVoiceNodeDownloading.png in Resources */,
 				140F8A5A1CC5CCCA00118DE2 /* KeyboardView.xib in Resources */,
 				14FF894A1CC0BF5F00F65100 /* PhoneViewController.xib in Resources */,
 				14FF893B1CC09AC700F65100 /* ImportViewController.xib in Resources */,
@@ -717,9 +823,15 @@
 				14FF894F1CC0BF8100F65100 /* MainViewController.xib in Resources */,
 				14FF89551CC0DFB300F65100 /* MessageCell.xib in Resources */,
 				14FF89401CC0BEF500F65100 /* MessageViewController.xib in Resources */,
+				1406A67B1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png in Resources */,
+				1406A6771CCA2200004E928A /* ReceiverTextNodeBkg@2x.png in Resources */,
+				1406A67D1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png in Resources */,
 				143D07C01CBF99AE0091DFF1 /* Assets.xcassets in Resources */,
+				1406A6751CCA2200004E928A /* photo@2x.png in Resources */,
 				143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */,
 				14FF89341CC07D0D00F65100 /* RegisterViewContrller.xib in Resources */,
+				1406A6761CCA2200004E928A /* ReceiverTextNodeBkg.png in Resources */,
+				1406A6731CCA2200004E928A /* photo1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,16 +865,20 @@
 				143018141CC470E300004DE6 /* NSString+PinYin4Cocoa.m in Sources */,
 				1430181D1CC4783F00004DE6 /* ContactsCell.m in Sources */,
 				14D822C01CC8BD9D008F7533 /* MoreSetViewController.m in Sources */,
+				1406A6851CCA2C39004E928A /* MessageChatCell.m in Sources */,
 				143018111CC470E300004DE6 /* ChineseInclude.m in Sources */,
 				143D07B81CBF99AE0091DFF1 /* AppDelegate.m in Sources */,
+				1406A65D1CCA1FD7004E928A /* MessageChatViewController.m in Sources */,
 				14CD5A091CC71AC400F83180 /* AddressBookModel.m in Sources */,
 				14EC4D951CC61CFA005C80AC /* UIView+Extension.m in Sources */,
 				143018191CC470E300004DE6 /* ZYPinYinSearch.m in Sources */,
+				1406A6531CC9FC12004E928A /* ChucklesViewController.m in Sources */,
 				140F8A5E1CC5E2A400118DE2 /* WriteNewsViewcontroller.m in Sources */,
 				143018161CC470E300004DE6 /* PinYinForObjc.m in Sources */,
 				14D822B11CC8BD36008F7533 /* LanguageViewController.m in Sources */,
 				143018121CC470E300004DE6 /* ChineseToPinyinResource.m in Sources */,
 				14FF89331CC07D0D00F65100 /* RegisterViewContrller.m in Sources */,
+				1406A6581CC9FD5A004E928A /* BlackListViewController.m in Sources */,
 				14D822BB1CC8BD76008F7533 /* GuideViewController.m in Sources */,
 				143018151CC470E300004DE6 /* PinyinFormatter.m in Sources */,
 				14FF892C1CC0798C00F65100 /* BaseViewController.m in Sources */,

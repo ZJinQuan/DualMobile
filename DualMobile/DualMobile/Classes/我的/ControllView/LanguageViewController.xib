@@ -7,14 +7,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LanguageViewController">
             <connections>
+                <outlet property="languageView" destination="sWM-pL-qDd" id="d16-RA-Cdd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sWM-pL-qDd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sWM-pL-qDd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0bY-lz-pLY"/>
+                <constraint firstItem="sWM-pL-qDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LjV-OA-MfX"/>
+                <constraint firstAttribute="trailing" secondItem="sWM-pL-qDd" secondAttribute="trailing" id="UtO-Uf-fJ5"/>
+                <constraint firstAttribute="bottom" secondItem="sWM-pL-qDd" secondAttribute="bottom" id="wpV-Gp-6jx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
 </document>

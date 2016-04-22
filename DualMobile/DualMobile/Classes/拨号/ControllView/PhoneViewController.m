@@ -15,10 +15,9 @@
 
 @property (nonatomic, assign) NSInteger index;
 
-@property (weak, nonatomic) IBOutlet UITextField *phoneText;
 
 
-@property (nonatomic, strong) UITextField *phoneText1;
+@property (nonatomic, strong) UITextField *phoneText;
 
 @property (nonatomic, strong) UIView *dialView;
 
@@ -43,14 +42,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickPhoneNum:) name:@"phoneNum" object:nil];
     
-    UITextField *phoneText = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
     
-    self.navigationItem.titleView = phoneText;
-    phoneText.tintColor = [UIColor blackColor];
-    phoneText.text = @"通讯";
-    phoneText.userInteractionEnabled = NO;
-    phoneText.textAlignment = NSTextAlignmentCenter;
-    self.phoneText1 = phoneText;
     
     self.index = 1;
     
@@ -62,11 +54,11 @@
     
     NSLog(@"%@",not.object);
     
-    if ([self.phoneText1.text isEqualToString:@"通讯"]) {
+    if ([self.phoneText.text isEqualToString:@"通讯"]) {
         
-        self.phoneText1.textColor = RGB(241, 145, 73);
-        self.phoneText1.font = [UIFont systemFontOfSize:22];
-        self.phoneText1.text = not.object;
+        self.phoneText.textColor = RGB(241, 145, 73);
+        self.phoneText.font = [UIFont systemFontOfSize:22];
+        self.phoneText.text = not.object;
         
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"me_btn_delete"] style:UIBarButtonItemStylePlain target:self action:@selector(clickEmpty)];
         self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
@@ -79,7 +71,7 @@
         
     }else{
         
-        self.phoneText1.text = [NSString stringWithFormat:@"%@%@",self.phoneText1.text,not.object];
+        self.phoneText.text = [NSString stringWithFormat:@"%@%@",self.phoneText.text,not.object];
     
     }
     
@@ -88,9 +80,9 @@
 
 -(void) clickEmpty{
     
-    self.phoneText1.text = @"通讯";
-    self.phoneText1.textColor = [UIColor blackColor];
-    
+    self.phoneText.text = @"通讯";
+    self.phoneText.textColor = [UIColor blackColor];
+    self.phoneText.font = [UIFont systemFontOfSize:17];
     [self.dialView removeFromSuperview];
     
     self.navigationItem.rightBarButtonItem = nil;
@@ -145,7 +137,7 @@
 //拨号键
 -(void)clickDialup{
     
-    UIAlertView *aler = [[UIAlertView alloc] initWithTitle:@"拨号中..." message:self.phoneText1.text delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    UIAlertView *aler = [[UIAlertView alloc] initWithTitle:@"拨号中..." message:self.phoneText.text delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     
     [aler show];
     
@@ -166,14 +158,16 @@
 //删除
 -(void)clickDelete{
     
-    if (!(self.phoneText1.text.length < 1)) {
+    if (!(self.phoneText.text.length < 1)) {
         
-        self.phoneText1.text = [self.phoneText1.text substringWithRange:NSMakeRange(0, self.phoneText1.text.length - 1)];
+        self.phoneText.text = [self.phoneText.text substringWithRange:NSMakeRange(0, self.phoneText.text.length - 1)];
         
-        if (self.phoneText1.text.length == 0){
+        if (self.phoneText.text.length == 0){
         
-            self.phoneText1.text = @"通讯";
-            self.phoneText1.textColor = [UIColor blackColor];
+            self.phoneText.text = @"通讯";
+            self.phoneText.textColor = [UIColor blackColor];
+            self.phoneText.font = [UIFont systemFontOfSize:17];
+            self.navigationItem.rightBarButtonItem = nil;
             
             [self.dialView removeFromSuperview];
         }
@@ -214,6 +208,17 @@
 }
 
 -(void) initNavBarBtn{
+    
+    
+    //号码输入框
+    UITextField *phoneText = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+    
+    self.navigationItem.titleView = phoneText;
+    phoneText.tintColor = [UIColor blackColor];
+    phoneText.text = @"通讯";
+    phoneText.userInteractionEnabled = NO;
+    phoneText.textAlignment = NSTextAlignmentCenter;
+    self.phoneText = phoneText;
     
     //编辑
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(clickEdit)];
