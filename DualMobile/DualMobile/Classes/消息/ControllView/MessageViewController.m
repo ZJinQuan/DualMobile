@@ -9,6 +9,7 @@
 #import "MessageViewController.h"
 #import "MessageCell.h"
 #import "WriteNewsViewcontroller.h"
+#import "MessageChatViewController.h"
 
 @interface MessageViewController ()<UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchView;
@@ -39,9 +40,7 @@
     [self initNavBarBtn];
     
     NSArray *segArr = [[NSArray alloc] initWithObjects:@"副卡1",@"副卡2", nil];
-    
-    
-    
+
     self.segmented = [[UISegmentedControl alloc] initWithItems:segArr];
     
     self.segmented.frame = CGRectMake(0, 0, 150, 30);
@@ -152,8 +151,6 @@
             break;
     }
     
-//
-    
     return cell;
 }
 
@@ -161,6 +158,15 @@
     return 85;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MessageChatViewController *chatVC = [[MessageChatViewController alloc] init];
+    [chatVC setHidesBottomBarWhenPushed:YES];
+    
+    chatVC.title = @"张三";
+    
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
 
 #pragma mark 搜索框 UISearchBarDelegate
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
