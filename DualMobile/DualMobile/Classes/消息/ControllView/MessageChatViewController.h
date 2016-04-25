@@ -10,6 +10,6 @@
 
 @interface MessageChatViewController : BaseViewController
 
-@property (nonatomic, strong) NSMutableArray *resultArray;
+
 
 @end

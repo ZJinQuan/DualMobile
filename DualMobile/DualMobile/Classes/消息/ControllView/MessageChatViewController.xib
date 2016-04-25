@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="bottomLine" destination="If1-Tp-tiY" id="5TF-qU-rXg"/>
                 <outlet property="chatView" destination="Gn4-0L-0G1" id="UpE-Xp-IDw"/>
+                <outlet property="messageText" destination="4Sm-b7-Y5F" id="zq4-Zl-ZCp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +42,9 @@
                             <state key="normal" title="发送">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="clickSendOut:" destination="-1" eventType="touchUpInside" id="76Y-q8-r2h"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-eY-k3H">
                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
