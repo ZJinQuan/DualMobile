@@ -13,23 +13,14 @@
 		1406A6591CC9FD5A004E928A /* BlackListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6571CC9FD5A004E928A /* BlackListViewController.xib */; };
 		1406A65D1CCA1FD7004E928A /* MessageChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A65B1CCA1FD7004E928A /* MessageChatViewController.m */; };
 		1406A65E1CCA1FD7004E928A /* MessageChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A65C1CCA1FD7004E928A /* MessageChatViewController.xib */; };
-		1406A6711CCA2200004E928A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6601CCA2200004E928A /* image.png */; };
-		1406A6721CCA2200004E928A /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6611CCA2200004E928A /* photo.png */; };
-		1406A6731CCA2200004E928A /* photo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6621CCA2200004E928A /* photo1.png */; };
-		1406A6741CCA2200004E928A /* photo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6631CCA2200004E928A /* photo1@2x.png */; };
-		1406A6751CCA2200004E928A /* photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6641CCA2200004E928A /* photo@2x.png */; };
 		1406A6761CCA2200004E928A /* ReceiverTextNodeBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6651CCA2200004E928A /* ReceiverTextNodeBkg.png */; };
 		1406A6771CCA2200004E928A /* ReceiverTextNodeBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6661CCA2200004E928A /* ReceiverTextNodeBkg@2x.png */; };
 		1406A6781CCA2200004E928A /* ReceiverVoiceNodeDownloading.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6671CCA2200004E928A /* ReceiverVoiceNodeDownloading.png */; };
 		1406A6791CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6681CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png */; };
-		1406A67A1CCA2200004E928A /* ReceiverVoiceNodePlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6691CCA2200004E928A /* ReceiverVoiceNodePlaying.png */; };
-		1406A67B1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66A1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png */; };
 		1406A67C1CCA2200004E928A /* SenderAppNodeBkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66B1CCA2200004E928A /* SenderAppNodeBkg_HL.png */; };
 		1406A67D1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66C1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png */; };
 		1406A67E1CCA2200004E928A /* SenderVoiceNodeDownloading.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66D1CCA2200004E928A /* SenderVoiceNodeDownloading.png */; };
 		1406A67F1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66E1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png */; };
-		1406A6801CCA2200004E928A /* SenderVoiceNodePlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A66F1CCA2200004E928A /* SenderVoiceNodePlaying.png */; };
-		1406A6811CCA2200004E928A /* SenderVoiceNodePlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6701CCA2200004E928A /* SenderVoiceNodePlaying@2x.png */; };
 		1406A6851CCA2C39004E928A /* MessageChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A6831CCA2C39004E928A /* MessageChatCell.m */; };
 		1406A6861CCA2C39004E928A /* MessageChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6841CCA2C39004E928A /* MessageChatCell.xib */; };
 		140F8A581CC5CCBA00118DE2 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140F8A571CC5CCBA00118DE2 /* KeyboardView.m */; };
@@ -128,23 +119,14 @@
 		1406A65A1CCA1FD7004E928A /* MessageChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageChatViewController.h; sourceTree = "<group>"; };
 		1406A65B1CCA1FD7004E928A /* MessageChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageChatViewController.m; sourceTree = "<group>"; };
 		1406A65C1CCA1FD7004E928A /* MessageChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageChatViewController.xib; sourceTree = "<group>"; };
-		1406A6601CCA2200004E928A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
-		1406A6611CCA2200004E928A /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
-		1406A6621CCA2200004E928A /* photo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo1.png; sourceTree = "<group>"; };
-		1406A6631CCA2200004E928A /* photo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo1@2x.png"; sourceTree = "<group>"; };
-		1406A6641CCA2200004E928A /* photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@2x.png"; sourceTree = "<group>"; };
 		1406A6651CCA2200004E928A /* ReceiverTextNodeBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverTextNodeBkg.png; sourceTree = "<group>"; };
 		1406A6661CCA2200004E928A /* ReceiverTextNodeBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverTextNodeBkg@2x.png"; sourceTree = "<group>"; };
 		1406A6671CCA2200004E928A /* ReceiverVoiceNodeDownloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverVoiceNodeDownloading.png; sourceTree = "<group>"; };
 		1406A6681CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodeDownloading@2x.png"; sourceTree = "<group>"; };
-		1406A6691CCA2200004E928A /* ReceiverVoiceNodePlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverVoiceNodePlaying.png; sourceTree = "<group>"; };
-		1406A66A1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying@2x.png"; sourceTree = "<group>"; };
 		1406A66B1CCA2200004E928A /* SenderAppNodeBkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderAppNodeBkg_HL.png; sourceTree = "<group>"; };
 		1406A66C1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderAppNodeBkg_HL@2x.png"; sourceTree = "<group>"; };
 		1406A66D1CCA2200004E928A /* SenderVoiceNodeDownloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderVoiceNodeDownloading.png; sourceTree = "<group>"; };
 		1406A66E1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodeDownloading@2x.png"; sourceTree = "<group>"; };
-		1406A66F1CCA2200004E928A /* SenderVoiceNodePlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderVoiceNodePlaying.png; sourceTree = "<group>"; };
-		1406A6701CCA2200004E928A /* SenderVoiceNodePlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying@2x.png"; sourceTree = "<group>"; };
 		1406A6821CCA2C39004E928A /* MessageChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageChatCell.h; sourceTree = "<group>"; };
 		1406A6831CCA2C39004E928A /* MessageChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageChatCell.m; sourceTree = "<group>"; };
 		1406A6841CCA2C39004E928A /* MessageChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageChatCell.xib; sourceTree = "<group>"; };
@@ -291,23 +273,14 @@
 		1406A65F1CCA2200004E928A /* image */ = {
 			isa = PBXGroup;
 			children = (
-				1406A6601CCA2200004E928A /* image.png */,
-				1406A6611CCA2200004E928A /* photo.png */,
-				1406A6621CCA2200004E928A /* photo1.png */,
-				1406A6631CCA2200004E928A /* photo1@2x.png */,
-				1406A6641CCA2200004E928A /* photo@2x.png */,
 				1406A6651CCA2200004E928A /* ReceiverTextNodeBkg.png */,
 				1406A6661CCA2200004E928A /* ReceiverTextNodeBkg@2x.png */,
 				1406A6671CCA2200004E928A /* ReceiverVoiceNodeDownloading.png */,
 				1406A6681CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png */,
-				1406A6691CCA2200004E928A /* ReceiverVoiceNodePlaying.png */,
-				1406A66A1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png */,
 				1406A66B1CCA2200004E928A /* SenderAppNodeBkg_HL.png */,
 				1406A66C1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png */,
 				1406A66D1CCA2200004E928A /* SenderVoiceNodeDownloading.png */,
 				1406A66E1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png */,
-				1406A66F1CCA2200004E928A /* SenderVoiceNodePlaying.png */,
-				1406A6701CCA2200004E928A /* SenderVoiceNodePlaying@2x.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -787,17 +760,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1406A67F1CCA2200004E928A /* SenderVoiceNodeDownloading@2x.png in Resources */,
-				1406A6711CCA2200004E928A /* image.png in Resources */,
 				14D822C61CC8C2E3008F7533 /* UserDetailsViewController.xib in Resources */,
-				1406A6721CCA2200004E928A /* photo.png in Resources */,
 				14D822C11CC8BD9D008F7533 /* MoreSetViewController.xib in Resources */,
 				14D822A81CC8BCEE008F7533 /* TransferViewController.xib in Resources */,
-				1406A6741CCA2200004E928A /* photo1@2x.png in Resources */,
 				1406A6861CCA2C39004E928A /* MessageChatCell.xib in Resources */,
 				1406A6591CC9FD5A004E928A /* BlackListViewController.xib in Resources */,
 				1430181E1CC4783F00004DE6 /* ContactsCell.xib in Resources */,
 				1430182F1CC4B6A600004DE6 /* ImportPerViewController.xib in Resources */,
-				1406A6801CCA2200004E928A /* SenderVoiceNodePlaying.png in Resources */,
 				1406A67C1CCA2200004E928A /* SenderAppNodeBkg_HL.png in Resources */,
 				14FF89451CC0BF1F00F65100 /* ContactsViewController.xib in Resources */,
 				140F8A5F1CC5E2A400118DE2 /* WriteNewsViewcontroller.xib in Resources */,
@@ -806,10 +775,8 @@
 				1406A65E1CCA1FD7004E928A /* MessageChatViewController.xib in Resources */,
 				14D822AD1CC8BD0E008F7533 /* VoiceViewController.xib in Resources */,
 				143018231CC483C200004DE6 /* AddPeopleViewController.xib in Resources */,
-				1406A6811CCA2200004E928A /* SenderVoiceNodePlaying@2x.png in Resources */,
 				1406A6781CCA2200004E928A /* ReceiverVoiceNodeDownloading.png in Resources */,
 				14D822B71CC8BD59008F7533 /* SecurityViewController.xib in Resources */,
-				1406A67A1CCA2200004E928A /* ReceiverVoiceNodePlaying.png in Resources */,
 				143018181CC470E300004DE6 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				14CD5A061CC719B700F83180 /* DetailsViewController.xib in Resources */,
 				1406A6791CCA2200004E928A /* ReceiverVoiceNodeDownloading@2x.png in Resources */,
@@ -823,15 +790,12 @@
 				14FF894F1CC0BF8100F65100 /* MainViewController.xib in Resources */,
 				14FF89551CC0DFB300F65100 /* MessageCell.xib in Resources */,
 				14FF89401CC0BEF500F65100 /* MessageViewController.xib in Resources */,
-				1406A67B1CCA2200004E928A /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				1406A6771CCA2200004E928A /* ReceiverTextNodeBkg@2x.png in Resources */,
 				1406A67D1CCA2200004E928A /* SenderAppNodeBkg_HL@2x.png in Resources */,
 				143D07C01CBF99AE0091DFF1 /* Assets.xcassets in Resources */,
-				1406A6751CCA2200004E928A /* photo@2x.png in Resources */,
 				143D080B1CBF9F580091DFF1 /* LoginViewController.xib in Resources */,
 				14FF89341CC07D0D00F65100 /* RegisterViewContrller.xib in Resources */,
 				1406A6761CCA2200004E928A /* ReceiverTextNodeBkg.png in Resources */,
-				1406A6731CCA2200004E928A /* photo1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,6 +33,11 @@
 
 @implementation ContactsViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -43,11 +48,6 @@
     [self.view addSubview:self.friendTableView];
     [self.view addSubview:self.searchBar];
     
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
     self.dataSource = [NSMutableArray array];
     self.addressBookTemp = [NSMutableArray array];
     
@@ -56,7 +56,11 @@
     [self initData];
     
     [_friendTableView reloadData];
+
+    
 }
+
+
 
 -(void) ABAddressBook{
     

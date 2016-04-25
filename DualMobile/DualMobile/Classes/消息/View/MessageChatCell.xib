@@ -20,63 +20,28 @@
                             <constraint firstAttribute="height" constant="20" id="flU-Bg-3pf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160418_1" translatesAutoresizingMaskIntoConstraints="NO" id="emO-gy-5uy">
-                        <rect key="frame" x="318" y="25" width="55" height="55"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="55" id="7Ta-u6-p6f"/>
-                            <constraint firstAttribute="height" constant="55" id="EEN-Is-wl2"/>
-                        </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160418_1" translatesAutoresizingMaskIntoConstraints="NO" id="n6s-j9-CLP">
-                        <rect key="frame" x="5" y="25" width="55" height="55"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="55" id="4FP-jL-kPh"/>
-                            <constraint firstAttribute="width" constant="55" id="c5c-ab-LsD"/>
-                        </constraints>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SB-Aw-YQT">
-                        <rect key="frame" x="250" y="25" width="60" height="35"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-VU-rfy">
+                        <rect key="frame" x="8" y="25" width="60" height="35"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="PmO-HE-oMf"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="gYb-SS-89q"/>
-                            <constraint firstAttribute="height" constant="35" id="iCW-L2-bHI"/>
-                        </constraints>
                         <state key="normal" title="Button"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-VU-rfy">
-                        <rect key="frame" x="68" y="25" width="60" height="35"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SB-Aw-YQT">
+                        <rect key="frame" x="310" y="26" width="60" height="35"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="9bm-bB-NcN"/>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="jrn-A2-2Mq"/>
-                            <constraint firstAttribute="height" constant="35" id="sLc-fD-dUl"/>
-                        </constraints>
                         <state key="normal" title="Button"/>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.68220343480000001" blue="0.58608461739999995" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="RJX-oS-Jl2" secondAttribute="trailing" id="5tc-Ax-zRZ"/>
-                    <constraint firstItem="Paf-VU-rfy" firstAttribute="leading" secondItem="n6s-j9-CLP" secondAttribute="trailing" constant="8" id="JHc-LI-FYg"/>
                     <constraint firstItem="RJX-oS-Jl2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jif-wI-Dzs"/>
-                    <constraint firstItem="emO-gy-5uy" firstAttribute="leading" secondItem="3SB-Aw-YQT" secondAttribute="trailing" constant="8" id="KUD-xG-1JA"/>
-                    <constraint firstAttribute="trailing" secondItem="emO-gy-5uy" secondAttribute="trailing" constant="5" id="PHE-4f-oj2"/>
-                    <constraint firstItem="3SB-Aw-YQT" firstAttribute="top" secondItem="emO-gy-5uy" secondAttribute="top" id="S02-an-0Rd"/>
-                    <constraint firstItem="emO-gy-5uy" firstAttribute="top" secondItem="RJX-oS-Jl2" secondAttribute="bottom" constant="5" id="cM7-u5-yzB"/>
-                    <constraint firstItem="Paf-VU-rfy" firstAttribute="top" secondItem="n6s-j9-CLP" secondAttribute="top" id="d6I-fi-j54"/>
                     <constraint firstItem="RJX-oS-Jl2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l6n-mz-fyf"/>
-                    <constraint firstItem="n6s-j9-CLP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="pIa-fa-Ayl"/>
-                    <constraint firstItem="n6s-j9-CLP" firstAttribute="top" secondItem="RJX-oS-Jl2" secondAttribute="bottom" constant="5" id="xbI-Us-bmH"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="507" y="431.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Snip20160418_1" width="736" height="662"/>
-    </resources>
 </document>
