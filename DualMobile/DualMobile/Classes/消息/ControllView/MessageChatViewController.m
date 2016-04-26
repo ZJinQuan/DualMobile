@@ -127,11 +127,24 @@
 #pragma mark UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UIFont *font = [UIFont systemFontOfSize:14];
+//    UIFont *font = [UIFont systemFontOfSize:14];
     
     MessageModel *model = [_resultArray objectAtIndex:indexPath.row];
     
-    CGSize size = [model.content sizeWithFont:font constrainedToSize:CGSizeMake(180.0f, 20000.0f) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+    
+//    requiredSize = [self.text boundingRectWithSize:boundingSize options:\
+//                    NSStringDrawingTruncatesLastVisibleLine |
+//                    NSStringDrawingUsesLineFragmentOrigin |
+//                    NSStringDrawingUsesFontLeading
+//                                        attributes:attribute context:nil].size;
+
+    
+    CGSize size = [model.content boundingRectWithSize:CGSizeMake(180.0f, 20000.0f) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    
+
+//    CGSize size = [model.content sizeWithFont:font constrainedToSize:CGSizeMake(180.0f, 20000.0f) lineBreakMode:NSLineBreakByWordWrapping];
     
     
     return size.height + 50;
