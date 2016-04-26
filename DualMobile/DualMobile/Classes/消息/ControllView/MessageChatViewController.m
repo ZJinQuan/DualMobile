@@ -42,14 +42,14 @@
         
         MessageModel *model = [[MessageModel alloc] init];
         
-        if (i == 2) {
+        if (i == 2 || i == 5 || i == 8) {
             
             model.name = @"me";
-            model.content = @"安科技是地方看见俺还是贷款纠纷安徽的身份";
+            model.content = @"安科技是地方看见俺还是贷款纠徽见俺还是贷款纠纷安徽见俺还是贷款纠纷安徽的身份";
             
         }else{
             model.name = @"张三";
-            model.content = @"安科技是地方看见俺还是贷款纠纷安徽的身份卡哈迪斯卡飞机发了多少。";
+            model.content = @"安科技是地方看见俺还方看见俺还方看见俺还方看见俺还方看见俺还是贷款纠纷安徽的身份卡哈迪斯卡飞机发了多少。";
         }
         
         
@@ -71,57 +71,61 @@
     
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rowCount - 1 inSection:0];
     
-    [self.chatView scrollToRowAtIndexPath:indexPath
-     
-                      atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    [self.chatView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    
     
 }
 
 //监听键盘高度
 - (void)keyboardWasChange:(NSNotification *)aNotification {
     
+    
     NSDictionary *info = [aNotification userInfo];
-    CGSize kSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     [UIView animateWithDuration:0.3f animations:^{
         
-        self.bottomLine.constant = kSize.height;
-        
+        self.bottomLine.constant = kbSize.height;
+
     }];
+
     
     NSUInteger rowCount = [self.chatView numberOfRowsInSection:0];
     
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rowCount - 1 inSection:0];
     
-    [self.chatView scrollToRowAtIndexPath:indexPath
-     
-                         atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    [self.chatView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
 }
 
+//点击发送
 - (IBAction)clickSendOut:(UIButton *)sender {
     
-    MessageModel *model = [[MessageModel alloc] init];
     
-    model.name = @"me";
-    model.content = self.messageText.text;
-    
-    [_resultArray addObject:model];
-    
-    
-    [_chatView reloadData];
-    
-    self.messageText.text = nil;
-    
-    NSUInteger rowCount = [self.chatView numberOfRowsInSection:0];
-    
-    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rowCount-1 inSection:0];
-    
-    [self.chatView scrollToRowAtIndexPath:indexPath
-     
-                         atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    
-    
-    
+    if (self.messageText.text.length < 1) {
+      
+        return;
+    }else{
+        
+        MessageModel *model = [[MessageModel alloc] init];
+        
+        model.name = @"me";
+        model.content = self.messageText.text;
+        
+        [_resultArray addObject:model];
+        
+        
+        [_chatView reloadData];
+        
+        self.messageText.text = nil;
+        
+        NSUInteger rowCount = [self.chatView numberOfRowsInSection:0];
+        
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rowCount-1 inSection:0];
+        
+        [self.chatView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+        
+    } 
+
 }
 
 #pragma mark UITableViewDelegate
@@ -152,15 +156,13 @@
 
 
 #pragma mark UITableViewDataSource
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _resultArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    MessageChatCell *cell = [[MessageChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    MessageChatCell *cell = [[MessageChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ChatCell"];
     
     MessageModel *model = _resultArray[indexPath.row];
     
@@ -169,10 +171,10 @@
     cell.model = model;
     
     return cell;
+    
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 
