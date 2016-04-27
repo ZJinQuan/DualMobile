@@ -56,7 +56,6 @@
         [_resultArray addObject:model];
     }
     
-    
     //监听键盘高度
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasChange:) name:UIKeyboardWillShowNotification object:nil];
     
@@ -67,12 +66,15 @@
     self.navigationItem.rightBarButtonItem = rightBtn;
     
     
-    NSUInteger rowCount = [self.chatView numberOfRowsInSection:0];
+//    NSUInteger rowCount = [self.chatView numberOfRowsInSection:0];
+//    
+//    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rowCount - 1 inSection:0];
+//    
+//    [self.chatView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     
-    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rowCount - 1 inSection:0];
     
-    [self.chatView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     
+    self.chatView.contentOffset = CGPointMake(0, self.chatView.height + 60);
     
 }
 

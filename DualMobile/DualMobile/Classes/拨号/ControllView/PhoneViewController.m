@@ -56,7 +56,7 @@
     
     if ([self.phoneText.text isEqualToString:@"通讯"]) {
         
-        self.phoneText.textColor = RGB(241, 145, 73);
+        self.phoneText.textColor = RGBA(241, 145, 73,1);
         self.phoneText.font = [UIFont systemFontOfSize:22];
         self.phoneText.text = not.object;
         
@@ -97,7 +97,7 @@
     
     //拨号键
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth / 2, self.dialView.height)];
-    btn.backgroundColor = RGB(241, 145, 73);
+    btn.backgroundColor = RGBA(241, 145, 73, 1);
     [btn setImage:[UIImage imageNamed:@"btn_call"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(clickDialup) forControlEvents:UIControlEventTouchUpInside];
     

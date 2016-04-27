@@ -17,6 +17,9 @@
 
 @property (nonatomic, strong) UISegmentedControl *segmented;
 
+@property (nonatomic, strong) UIView *enditView;
+
+@property (nonatomic, strong) UIBarButtonItem *leftBtn;
 @end
 
 @implementation MessageViewController
@@ -31,7 +34,7 @@
     
     self.messageTableView.dataSource = self;
     self.messageTableView.delegate = self;
-    self.messageTableView.backgroundColor = RGB(250, 250, 250);
+    self.messageTableView.backgroundColor = RGBA(250, 250, 250, 1);
     self.messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.messageTableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:nil] forCellReuseIdentifier:@"MessageCell"];
@@ -48,19 +51,30 @@
     self.navigationItem.titleView = self.segmented;
     
     [self.segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
+    
+    
 }
 
 -(void) clickSwitch:(UISegmentedControl *)seg{
     
     switch (seg.selectedSegmentIndex) {
         case 0:{
-            NSLog(@"卡1");
+            
+            self.leftBtn.title = @"编辑";
+            
+            NSLog(@"副卡1");
             [self.messageTableView reloadData];
+            [self.messageTableView setEditing:NO animated:YES];
         }
         break;
             
         case 1:{
-            NSLog(@"卡2");
+            
+            self.leftBtn.title = @"编辑";
+            
+            NSLog(@"副卡2");
+            [self.messageTableView setEditing:NO animated:YES];
+            
             [self.messageTableView reloadData];
         }
         break;
@@ -74,12 +88,12 @@
 -(void) initNavBarBtn{
     
     //编辑
-    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(clickEdit)];
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(clickEdit:)];
     
     leftBtn.tintColor = [UIColor blackColor];
     
-    [leftBtn setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:15] } forState:UIControlStateNormal];
-    
+    [leftBtn setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
+    self.leftBtn = leftBtn;
     self.navigationItem.leftBarButtonItem = leftBtn;
     
     //写消息
@@ -93,12 +107,31 @@
     
 }
 
--(void) clickEdit{
-    NSLog(@"编辑");
+-(void) clickEdit:(UIBarButtonItem *)sender{
+
+    
+    if (self.messageTableView.editing) {
+        
+        sender.title = @"编辑";
+        [self.messageTableView setEditing:NO animated:YES];
+        NSLog(@"取消");
+
+    }else{
+        
+        [self.messageTableView setEditing:YES animated:YES];
+        sender.title = @"取消";
+        NSLog(@"编辑");
+        
+    }
 }
 
+//发消息
 -(void) clickWriteNews{
     NSLog(@"发消息");
+    
+    self.leftBtn.title = @"编辑";
+    
+    [self.messageTableView setEditing:NO animated:YES];
     
     WriteNewsViewcontroller *writeVC = [[WriteNewsViewcontroller alloc] init];
     
@@ -111,6 +144,12 @@
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert;
+}
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     switch (_segmented.selectedSegmentIndex) {
@@ -133,8 +172,13 @@
     
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell"];
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     
+    
+    UIView *view = [[UIView alloc] initWithFrame:cell.frame];
+    
+    cell.selectedBackgroundView = view;
+    cell.selectedBackgroundView.backgroundColor = RGBA(241, 145, 73, 0.1);
     
     switch (_segmented.selectedSegmentIndex) {
         case 0:
@@ -160,12 +204,18 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MessageChatViewController *chatVC = [[MessageChatViewController alloc] init];
-    [chatVC setHidesBottomBarWhenPushed:YES];
+    if (tableView.editing) {
+        
+    }else{
+        
+        MessageChatViewController *chatVC = [[MessageChatViewController alloc] init];
+        [chatVC setHidesBottomBarWhenPushed:YES];
+        
+        chatVC.title = @"张三";
+        
+        [self.navigationController pushViewController:chatVC animated:YES];
+    }
     
-    chatVC.title = @"张三";
-    
-    [self.navigationController pushViewController:chatVC animated:YES];
 }
 
 #pragma mark 搜索框 UISearchBarDelegate

@@ -71,7 +71,7 @@
     
     if (indexPath.section == 1) {
         cell.textLabel.text = @"添加...";
-        cell.textLabel.textColor = RGB(241, 145, 73);
+        cell.textLabel.textColor = RGBA(241, 145, 73, 1);
     }else{
         cell.textLabel.text = @"张三 (深圳 移动)";
     }

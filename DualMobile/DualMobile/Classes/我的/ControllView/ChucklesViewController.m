@@ -84,7 +84,7 @@
     
     if (indexPath.section == 1) {
         cell.textLabel.text = @"添加...";
-        cell.textLabel.textColor = RGB(241, 145, 73);
+        cell.textLabel.textColor = RGBA(241, 145, 73, 1);
     }else{
         cell.textLabel.text = @"很抱歉, 我现在不方便接电话.";
         

@@ -21,7 +21,7 @@
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.translucent = YES;
     
-    self.view.backgroundColor = RGB(240, 240, 240);
+    self.view.backgroundColor = RGBA(240, 240, 240, 1);
     
     //返回图片
     UIImage *backButtonImage = [[UIImage imageNamed:@"Back_Chevron"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
