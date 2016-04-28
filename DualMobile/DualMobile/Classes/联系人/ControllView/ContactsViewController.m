@@ -14,7 +14,7 @@
 #import <AddressBook/AddressBook.h>
 #import "AddressBookModel.h"
 #import "DetailsViewController.h"
-
+#import "PopMenuView.h"
 
 #define kColor [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1];
 
@@ -41,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"全部联系人";
+//    self.navigationItem.title = @"全部联系人";
     
     [self initNavBarBtn];
     
@@ -53,13 +53,40 @@
     
     [self ABAddressBook];
     
-    [self initData];
+//    [self initData];
     
     [_friendTableView reloadData];
 
+    //设置titlView
+    UIButton *title = [[UIButton alloc] init];
+    [title setTitle:@"全部联系人" forState:UIControlStateNormal];
     
+    [title setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    
+    [title setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    //添加监听事件
+    [title addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = title;
 }
+#pragma mark 点击事件
+-(void) titleButtonClick:(UIButton *) button {
+    NSLog(@"%s",__func__);
+    
+    UITableView *customView = [[UITableView alloc] initWithFrame:CGRectMake(5, 12, 150, 160)];
 
+    customView.tag = 4444;
+    customView.bounces = NO;
+    customView.delegate = self;
+    customView.dataSource = self;
+    
+    //让customView 放到视图前面
+    PopMenuView *men = [[PopMenuView alloc] initWithCustomView:customView];
+    
+    //显示的位置
+    [men showWithView:button];
+}
 
 
 -(void) ABAddressBook{
@@ -126,7 +153,7 @@
         
         addressBook.name = nameString;
         
-        [_dataSource addObject:nameString];
+//        [_dataSource addObject:nameString];
         
         NSLog(@"+++++++++%@",nameString);
         
@@ -169,6 +196,8 @@
         }
         //将个人信息添加到数组中，循环完成后addressBookTemp中包含所有联系人的信息
         [_addressBookTemp addObject:addressBook];
+        
+        [self initData];
         
         if (abName) CFRelease(abName);
         if (abLastName) CFRelease(abLastName);
@@ -215,12 +244,30 @@
 
 #pragma mark - Init
 - (void)initData {
+
+    _dataSource = [self.addressBookTemp sortedArrayUsingComparator:^NSComparisonResult(AddressBookModel *m1, AddressBookModel *m2) {
+        return [m1.name compare:m2.name];
+    }];
     
-//    _searchDataSource = [NSMutableArray new];
-//    //获取索引的首字母
+    
+    NSLog(@"%@",_dataSource);
+    
+    _searchDataSource = [NSMutableArray new];
+    //获取索引的首字母
 //    _indexDataSource = [ChineseString IndexArray:_dataSource];
 //    //对原数据进行排序重新分组
 //    _allDataSource = [ChineseString LetterSortArray:_dataSource];
+    
+    NSMutableArray *dictArr = [NSMutableArray array];
+    for (int i = 0; i < _dataSource.count; i++) {
+        NSDictionary *dict = _dataSource[i];
+       
+        if ([dict objectForKey:@"name"] != nil) {
+            [dictArr addObject:dict];
+        }
+    }
+    
+    
     
 }
 
@@ -247,7 +294,13 @@
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    
+    if (tableView.tag == 4444) {
+        return 40;
+    }else{
+        return 60;
+    }
+  
 }
 
 //头部索引标题
@@ -283,43 +336,85 @@
 //        return _searchDataSource.count;
 //    }
     
-    return _addressBookTemp.count;
+    if (tableView.tag == 4444) {
+        return 4;
+    }else{
+        return _dataSource.count;
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactsCell"];
-
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    AddressBookModel *model = _addressBookTemp[indexPath.row];
-    
-    
-    if (!_isSearch) {
-//        cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
-        cell.model = model;
+    if (tableView.tag == 4444) {
         
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        NSArray *arr = @[@"全部联系人",@"卡1联系人", @"卡2联系人", @"手机联系人"];
+        
+        cell.textLabel.text = arr[indexPath.row];
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
+        
+        return cell;
     }else{
-//        cell.nameLabel.text = _searchDataSource[indexPath.row];
-    }
-    return cell;
-    
+        
+        ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactsCell"];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        AddressBookModel *model = _dataSource[indexPath.row];
+        
+        
+        if (!_isSearch) {
+            //        cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
+            cell.model = model;
+            
+        }else{
+            //        cell.nameLabel.text = _searchDataSource[indexPath.row];
+        }
+        return cell;
 
+    }
+    return nil;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    AddressBookModel *model = _addressBookTemp[indexPath.row];
     
-    DetailsViewController *detailVC = [[DetailsViewController alloc] init];
+    if (tableView.tag == 4444) {
+        
+        UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        
+        }else{
+        
+        AddressBookModel *model = _dataSource[indexPath.row];
+        
+        DetailsViewController *detailVC = [[DetailsViewController alloc] init];
+        
+        detailVC.model = model;
+        
+        detailVC.title = @"联系人详情";
+        
+        [detailVC setHidesBottomBarWhenPushed:YES];
+        
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
     
-    detailVC.model = model;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    detailVC.title = @"联系人详情";
-    
-    [detailVC setHidesBottomBarWhenPushed:YES];
-    
-    [self.navigationController pushViewController:detailVC animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setAccessoryType:UITableViewCellAccessoryNone];
+
     
 }
 

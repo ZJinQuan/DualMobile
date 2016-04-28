@@ -11,6 +11,6 @@
 
 @interface ContactsViewController : BaseViewController
 
-@property (strong, nonatomic) NSMutableArray *dataSource;/**<排序前的整个数据源*/
+@property (strong, nonatomic) NSArray *dataSource;/**<排序前的整个数据源*/
 
 @end

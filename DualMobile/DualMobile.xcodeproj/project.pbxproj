@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14005EB01CD19E4F00EB091A /* PopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14005EAF1CD19E4F00EB091A /* PopMenuView.m */; };
 		1406A6531CC9FC12004E928A /* ChucklesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A6511CC9FC12004E928A /* ChucklesViewController.m */; };
 		1406A6541CC9FC12004E928A /* ChucklesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406A6521CC9FC12004E928A /* ChucklesViewController.xib */; };
 		1406A6581CC9FD5A004E928A /* BlackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406A6561CC9FD5A004E928A /* BlackListViewController.m */; };
@@ -121,6 +122,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14005EAE1CD19E4F00EB091A /* PopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuView.h; sourceTree = "<group>"; };
+		14005EAF1CD19E4F00EB091A /* PopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuView.m; sourceTree = "<group>"; };
 		1406A6501CC9FC12004E928A /* ChucklesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChucklesViewController.h; sourceTree = "<group>"; };
 		1406A6511CC9FC12004E928A /* ChucklesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChucklesViewController.m; sourceTree = "<group>"; };
 		1406A6521CC9FC12004E928A /* ChucklesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChucklesViewController.xib; sourceTree = "<group>"; };
@@ -694,6 +697,8 @@
 				1430181A1CC4783F00004DE6 /* ContactsCell.h */,
 				1430181B1CC4783F00004DE6 /* ContactsCell.m */,
 				1430181C1CC4783F00004DE6 /* ContactsCell.xib */,
+				14005EAE1CD19E4F00EB091A /* PopMenuView.h */,
+				14005EAF1CD19E4F00EB091A /* PopMenuView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -898,6 +903,7 @@
 				14D822C51CC8C2E3008F7533 /* UserDetailsViewController.m in Sources */,
 				1481AE681CCDF168007FE014 /* MessageModel.m in Sources */,
 				143018101CC470E300004DE6 /* pinyin.c in Sources */,
+				14005EB01CD19E4F00EB091A /* PopMenuView.m in Sources */,
 				143018221CC483C200004DE6 /* AddPeopleViewController.m in Sources */,
 				14FF894E1CC0BF8100F65100 /* MainViewController.m in Sources */,
 				14FF893A1CC09AC700F65100 /* ImportViewController.m in Sources */,
