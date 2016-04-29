@@ -49,6 +49,58 @@
     
 }
 
+-(UIView *)dialView{
+    
+    if (!_dialView) {
+        
+        _dialView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - self.tabBarController.tabBar.height, kScreenWidth, self.tabBarController.tabBar.height)];
+        
+        _dialView.backgroundColor = [UIColor whiteColor];
+        
+        //拨号键
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth / 2, _dialView.height)];
+        btn.backgroundColor = RGBA(241, 145, 73, 1);
+        [btn setImage:[UIImage imageNamed:@"btn_call"] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(clickDialup) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        //隐藏拨号键盘
+        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(btn.width, 0, kScreenWidth / 4, _dialView.height)];
+        [btn1 setImage:[UIImage imageNamed:@"btn_callboard"] forState:UIControlStateNormal];
+        [btn1 setTitle:@"拨号" forState:UIControlStateNormal];
+        btn1.titleLabel.font = [UIFont systemFontOfSize:10];
+        [btn1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        btn1.titleEdgeInsets = UIEdgeInsetsMake(0, -20, -35, 0);
+        btn1.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 10, 0);
+        [btn1 addTarget:self action:@selector(clickHidden) forControlEvents:UIControlEventTouchUpInside];
+        
+        //删除键
+        UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth / 2 + btn1.width, 0, kScreenWidth / 4, _dialView.height)];
+        [btn2 setImage:[UIImage imageNamed:@"btn_delete"] forState:UIControlStateNormal];
+        [btn2 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [btn2 setTitle:@"删除" forState:UIControlStateNormal];
+        btn2.titleLabel.font = [UIFont systemFontOfSize:11];
+        btn2.titleEdgeInsets = UIEdgeInsetsMake(0, -20, -35, 0);
+        btn2.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 10, 0);
+        [btn2 addTarget:self action:@selector(clickDelete) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(kScreenWidth / 2 + btn1.width, 10, 1, 30)];
+        line.backgroundColor = [UIColor lightGrayColor];
+        
+        [_dialView addSubview:btn];
+        [_dialView addSubview:btn1];
+        [_dialView addSubview:btn2];
+        [_dialView addSubview:line];
+
+        
+        
+    }
+    return _dialView;
+}
+
+#pragma mark 点击事件
 //点击拨号键盘
 -(void)clickPhoneNum:(NSNotification *)not {
     
@@ -63,10 +115,6 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"me_btn_delete"] style:UIBarButtonItemStylePlain target:self action:@selector(clickEmpty)];
         self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
         
-        
-        [self initDialView];
-        
-        
         [[UIApplication sharedApplication].keyWindow addSubview:self.dialView];
         
     }else{
@@ -74,8 +122,6 @@
         self.phoneText.text = [NSString stringWithFormat:@"%@%@",self.phoneText.text,not.object];
     
     }
-    
-    
 }
 
 -(void) clickEmpty{
@@ -88,7 +134,7 @@
     self.navigationItem.rightBarButtonItem = nil;
 }
 
-#pragma mark 拨号View
+// 拨号View
 -(void) initDialView{
     
     self.dialView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - self.tabBarController.tabBar.height, kScreenWidth, self.tabBarController.tabBar.height)];

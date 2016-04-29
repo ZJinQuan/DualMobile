@@ -53,7 +53,7 @@
     
     [self ABAddressBook];
     
-//    [self initData];
+    [self initData];
     
     [_friendTableView reloadData];
 
@@ -142,6 +142,8 @@
         //获取当前联系人头像图片
         NSData *userImage = (__bridge NSData*)(ABPersonCopyImageData(person));
         
+        
+        
         if ((__bridge id)abFullName != nil) {
             nameString = (__bridge NSString *)abFullName;
         } else {
@@ -197,7 +199,7 @@
         //将个人信息添加到数组中，循环完成后addressBookTemp中包含所有联系人的信息
         [_addressBookTemp addObject:addressBook];
         
-        [self initData];
+        
         
         if (abName) CFRelease(abName);
         if (abLastName) CFRelease(abLastName);
@@ -258,15 +260,16 @@
 //    //对原数据进行排序重新分组
 //    _allDataSource = [ChineseString LetterSortArray:_dataSource];
     
-    NSMutableArray *dictArr = [NSMutableArray array];
-    for (int i = 0; i < _dataSource.count; i++) {
-        NSDictionary *dict = _dataSource[i];
-       
-        if ([dict objectForKey:@"name"] != nil) {
-            [dictArr addObject:dict];
-        }
-    }
-    
+//    NSMutableArray *dictArr = [NSMutableArray array];
+//    for (int i = 0; i < _dataSource.count; i++) {
+//        NSDictionary *dict = _dataSource[i];
+//
+//        NSString *ss= [dict objectForKey:@"name"];
+//        
+//        if ([dict objectForKey:@"name"] != nil) {
+//            [dictArr addObject:dict];
+//        }
+//    }
     
     
 }
@@ -435,12 +438,13 @@
     if (searchText.length == 0) {
         _isSearch = NO;
         [_searchDataSource addObjectsFromArray:_allDataSource];
+        
     }else {
         _isSearch = YES;
         [_searchDataSource addObjectsFromArray:ary];
     }
-    [self.friendTableView reloadData];
     
+    [self.friendTableView reloadData];
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
