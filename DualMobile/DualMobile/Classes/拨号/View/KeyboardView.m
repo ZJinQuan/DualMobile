@@ -68,7 +68,7 @@
             
 //            NSLog(@"%d",sender.tag - 1000);
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"phoneNum" object:[NSString stringWithFormat:@"%d",sender.tag - 1000] userInfo:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"phoneNum" object:[NSString stringWithFormat:@"%ld",sender.tag - 1000] userInfo:nil];
             // 数字
 //            self.textFiled.text = [NSString stringWithFormat:@"%@%ld",self.textFiled.text,sender.tag - 1000];
         }

@@ -15,8 +15,6 @@
 
 @property (nonatomic, assign) NSInteger index;
 
-
-
 @property (nonatomic, strong) UITextField *phoneText;
 
 @property (nonatomic, strong) UIView *dialView;
@@ -28,8 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //导航栏设置
     [self initNavBarBtn];
     
+    //添加拨号键盘
     KeyboardView *keyBoard = [[KeyboardView alloc] init];
     
     CGFloat keyHeight = kScreenHeight / 3;
@@ -40,12 +40,10 @@
     self.keyBoard = keyBoard;
     
     
+    //添加通知, 点击数字添加电话号码
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickPhoneNum:) name:@"phoneNum" object:nil];
-    
-    
-    
+
     self.index = 1;
-    
     
 }
 
@@ -93,9 +91,7 @@
         [_dialView addSubview:btn1];
         [_dialView addSubview:btn2];
         [_dialView addSubview:line];
-
-        
-        
+   
     }
     return _dialView;
 }
@@ -246,16 +242,10 @@
         default:
             break;
     }
-    
-    
-    
-    
-    
 }
 
-
+//导航栏设置
 -(void) initNavBarBtn{
-    
     
     //号码输入框
     UITextField *phoneText = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
@@ -276,6 +266,7 @@
     self.navigationItem.title = @"通话";
 }
 
+//编辑点击事件
 -(void) clickEdit{
     
     NSLog(@"编辑");

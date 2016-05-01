@@ -90,7 +90,12 @@
     
     //计算大小
     UIFont *font = [UIFont systemFontOfSize:14];
-    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(180.0f, 20000.0f) lineBreakMode:NSLineBreakByWordWrapping];
+//    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(180.0f, 20000.0f) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    
+    NSDictionary *attribute = @{NSFontAttributeName : font};
+    
+    CGSize size = [text boundingRectWithSize:CGSizeMake(180.0f, 20000.0f) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
     
     // build single chat bubble cell with given text
     UIView *returnView = [[UIView alloc] initWithFrame:CGRectZero];
