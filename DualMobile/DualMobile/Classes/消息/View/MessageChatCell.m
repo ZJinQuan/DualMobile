@@ -52,6 +52,7 @@
     
 }
 
+//重构方法
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -67,19 +68,6 @@
         self.timeLabel.textColor = [UIColor lightGrayColor];
         [self.contentView addSubview:self.timeLabel];
         
-//        if ([self.model.name isEqualToString:@"rhl"]) {
-//            
-//            self.timeLabel.text = @"12:00";
-//            
-//            [self addSubview:[self bubbleView:self.model.content from:YES withPosition:0]];
-//            
-//        }else{
-//            
-//            self.timeLabel.text = @"11:00";
-//            
-//            [self addSubview:[self bubbleView:self.model.content from:NO withPosition:0]];
-//            
-//        }
     }
     
     return self;
