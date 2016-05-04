@@ -29,6 +29,7 @@
 @property (strong, nonatomic) NSArray *indexDataSource;/**<索引数据源*/
 @property (assign, nonatomic) BOOL isSearch;
 
+@property (nonatomic, strong) UIBarButtonItem *leftBtn;
 @end
 
 @implementation ContactsViewController
@@ -57,18 +58,7 @@
     
     [_friendTableView reloadData];
 
-    //设置titlView
-    UIButton *title = [[UIButton alloc] init];
-    [title setTitle:@"全部联系人" forState:UIControlStateNormal];
     
-    [title setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    
-    [title setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    //添加监听事件
-    [title addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.titleView = title;
 }
 #pragma mark 点击事件
 -(void) titleButtonClick:(UIButton *) button {
@@ -89,147 +79,63 @@
 }
 
 
--(void) ABAddressBook{
-    
-    //新建一个通讯录类
-    ABAddressBookRef addressBooks = nil;
-    
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
-        
-    {
-        addressBooks =  ABAddressBookCreateWithOptions(NULL, NULL);
-        
-        //获取通讯录权限
-        
-        dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-        
-        ABAddressBookRequestAccessWithCompletion(addressBooks, ^(bool granted, CFErrorRef error){dispatch_semaphore_signal(sema);});
-        
-        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-        
-        
-    }
-    
-    else
-        
-    {
-        addressBooks = ABAddressBookCreate();
-        
-    }
-    
-    //获取通讯录中的所有人
-    CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBooks);
-    //通讯录中人数
-    CFIndex nPeople = ABAddressBookGetPersonCount(addressBooks);
-    
-    
-    
-    //循环，获取每个人的个人信息
-    for (NSInteger i = 0; i < nPeople; i++)
-    {
-        //新建一个addressBook model类
-        AddressBookModel *addressBook = [[AddressBookModel alloc] init];
-        //获取个人
-        ABRecordRef person = CFArrayGetValueAtIndex(allPeople, i);
-        //获取个人名字
-        CFTypeRef abName = ABRecordCopyValue(person, kABPersonFirstNameProperty);
-        CFTypeRef abLastName = ABRecordCopyValue(person, kABPersonLastNameProperty);
-        CFStringRef abFullName = ABRecordCopyCompositeName(person);
-        
-        NSString *nameString = (__bridge NSString *)abName;
-        NSString *lastNameString = (__bridge NSString *)abLastName;
-        
-        //获取当前联系人头像图片
-        NSData *userImage = (__bridge NSData*)(ABPersonCopyImageData(person));
-        
-        
-        
-        if ((__bridge id)abFullName != nil) {
-            nameString = (__bridge NSString *)abFullName;
-        } else {
-            if ((__bridge id)abLastName != nil)
-            {
-                nameString = [NSString stringWithFormat:@"%@ %@", nameString, lastNameString];
-            }
-        }
-        
-        addressBook.name = nameString;
-        
-//        [_dataSource addObject:nameString];
-        
-        NSLog(@"+++++++++%@",nameString);
-        
-        addressBook.recordID = (int)ABRecordGetRecordID(person);;
-        
-        addressBook.userImage = userImage;
-        
-        ABPropertyID multiProperties[] = {
-            kABPersonPhoneProperty,
-            kABPersonEmailProperty
-        };
-        
-        NSInteger multiPropertiesTotal = sizeof(multiProperties) / sizeof(ABPropertyID);
-        for (NSInteger j = 0; j < multiPropertiesTotal; j++) {
-            ABPropertyID property = multiProperties[j];
-            ABMultiValueRef valuesRef = ABRecordCopyValue(person, property);
-            NSInteger valuesCount = 0;
-            if (valuesRef != nil) valuesCount = ABMultiValueGetCount(valuesRef);
-            
-            if (valuesCount == 0) {
-                CFRelease(valuesRef);
-                continue;
-            }
-            //获取电话号码和email
-            for (NSInteger k = 0; k < valuesCount; k++) {
-                CFTypeRef value = ABMultiValueCopyValueAtIndex(valuesRef, k);
-                switch (j) {
-                    case 0: {// Phone number
-                        addressBook.tel = (__bridge NSString*)value;
-                        break;
-                    }
-                    case 1: {// Email
-                        addressBook.email = (__bridge NSString*)value;
-                        break;
-                    }
-                }
-                CFRelease(value);
-            }
-            CFRelease(valuesRef);
-        }
-        //将个人信息添加到数组中，循环完成后addressBookTemp中包含所有联系人的信息
-        [_addressBookTemp addObject:addressBook];
-        
-        
-        
-        if (abName) CFRelease(abName);
-        if (abLastName) CFRelease(abLastName);
-        if (abFullName) CFRelease(abFullName);
-    }
-    
-}
+
 
 
 
 -(void) initNavBarBtn{
     
     //编辑
-    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(clickEdit)];
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(clickEdit:)];
     leftBtn.tintColor = [UIColor blackColor];
     [leftBtn setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem = leftBtn;
-    
+    self.leftBtn = leftBtn;
     //添加
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(clickAdd)];
     rightBtn.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = rightBtn;
+    
+    
+    //设置titlView
+    UIButton *title = [[UIButton alloc] init];
+    [title setTitle:@"全部联系人" forState:UIControlStateNormal];
+    
+    [title setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    
+    [title setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    //添加监听事件
+    [title addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = title;
 }
 
--(void) clickEdit{
-    NSLog(@"编辑");
+-(void) clickEdit:(UIBarButtonItem *)sender{
+    
+    if (self.friendTableView.editing) {
+        
+        sender.title = @"编辑";
+        [self.friendTableView setEditing:NO animated:YES];
+        NSLog(@"取消");
+        
+    }else{
+        
+        [self.friendTableView setEditing:YES animated:YES];
+        sender.title = @"取消";
+        NSLog(@"编辑");
+        
+    }
+    
+    
+    
 }
 
 -(void) clickAdd{
     NSLog(@"添加");
+    
+    [self.friendTableView setEditing:NO animated:YES];
+    self.leftBtn.title = @"编辑";
     
     AddPeopleViewController *addVC = [[AddPeopleViewController alloc] init];
     
@@ -296,6 +202,10 @@
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (tableView.tag == 4444) {
@@ -358,6 +268,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         }
         
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         NSArray *arr = @[@"全部联系人",@"卡1联系人", @"卡2联系人", @"手机联系人"];
@@ -365,22 +276,20 @@
         cell.textLabel.text = arr[indexPath.row];
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         
-        return cell;
     }else{
         
         ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactsCell"];
         
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         AddressBookModel *model = _dataSource[indexPath.row];
         
-        
         if (!_isSearch) {
-            //        cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
+            //cell.nameLabel.text = _allDataSource[indexPath.section][indexPath.row];
             cell.model = model;
             
         }else{
-            //        cell.nameLabel.text = _searchDataSource[indexPath.row];
+            //cell.nameLabel.text = _searchDataSource[indexPath.row];
         }
         return cell;
 
@@ -390,27 +299,34 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    if (tableView.tag == 4444) {
+    if (tableView.editing) {
         
-        UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         
+        
+    }else{
+        
+        if (tableView.tag == 4444) {
+            
+            UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+            
         }else{
+            
+            AddressBookModel *model = _dataSource[indexPath.row];
+            
+            DetailsViewController *detailVC = [[DetailsViewController alloc] init];
+            
+            detailVC.model = model;
+            
+            detailVC.title = @"联系人详情";
+            
+            [detailVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.navigationController pushViewController:detailVC animated:YES];
+        }
         
-        AddressBookModel *model = _dataSource[indexPath.row];
-        
-        DetailsViewController *detailVC = [[DetailsViewController alloc] init];
-        
-        detailVC.model = model;
-        
-        detailVC.title = @"联系人详情";
-        
-        [detailVC setHidesBottomBarWhenPushed:YES];
-        
-        [self.navigationController pushViewController:detailVC animated:YES];
     }
-    
+
 }
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -460,6 +376,127 @@
     _searchBar.text = @"";
     _isSearch = NO;
     [_friendTableView reloadData];
+    
+}
+
+
+#pragma mark 获取通讯录
+-(void) ABAddressBook{
+    
+    //新建一个通讯录类
+    ABAddressBookRef addressBooks = nil;
+    
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
+        
+    {
+        addressBooks =  ABAddressBookCreateWithOptions(NULL, NULL);
+        
+        //获取通讯录权限
+        
+        dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+        
+        ABAddressBookRequestAccessWithCompletion(addressBooks, ^(bool granted, CFErrorRef error){dispatch_semaphore_signal(sema);});
+        
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        
+        
+    }
+    
+    else
+        
+    {
+        addressBooks = ABAddressBookCreate();
+        
+    }
+    
+    //获取通讯录中的所有人
+    CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBooks);
+    //通讯录中人数
+    CFIndex nPeople = ABAddressBookGetPersonCount(addressBooks);
+    
+    
+    
+    //循环，获取每个人的个人信息
+    for (NSInteger i = 0; i < nPeople; i++)
+    {
+        //新建一个addressBook model类
+        AddressBookModel *addressBook = [[AddressBookModel alloc] init];
+        //获取个人
+        ABRecordRef person = CFArrayGetValueAtIndex(allPeople, i);
+        //获取个人名字
+        CFTypeRef abName = ABRecordCopyValue(person, kABPersonFirstNameProperty);
+        CFTypeRef abLastName = ABRecordCopyValue(person, kABPersonLastNameProperty);
+        CFStringRef abFullName = ABRecordCopyCompositeName(person);
+        
+        NSString *nameString = (__bridge NSString *)abName;
+        NSString *lastNameString = (__bridge NSString *)abLastName;
+        
+        //获取当前联系人头像图片
+        NSData *userImage = (__bridge NSData*)(ABPersonCopyImageData(person));
+        
+        
+        
+        if ((__bridge id)abFullName != nil) {
+            nameString = (__bridge NSString *)abFullName;
+        } else {
+            if ((__bridge id)abLastName != nil)
+            {
+                nameString = [NSString stringWithFormat:@"%@ %@", nameString, lastNameString];
+            }
+        }
+        
+        addressBook.name = nameString;
+        
+        //        [_dataSource addObject:nameString];
+        
+        NSLog(@"+++++++++%@",nameString);
+        
+        addressBook.recordID = (int)ABRecordGetRecordID(person);;
+        
+        addressBook.userImage = userImage;
+        
+        ABPropertyID multiProperties[] = {
+            kABPersonPhoneProperty,
+            kABPersonEmailProperty
+        };
+        
+        NSInteger multiPropertiesTotal = sizeof(multiProperties) / sizeof(ABPropertyID);
+        for (NSInteger j = 0; j < multiPropertiesTotal; j++) {
+            ABPropertyID property = multiProperties[j];
+            ABMultiValueRef valuesRef = ABRecordCopyValue(person, property);
+            NSInteger valuesCount = 0;
+            if (valuesRef != nil) valuesCount = ABMultiValueGetCount(valuesRef);
+            
+            if (valuesCount == 0) {
+                CFRelease(valuesRef);
+                continue;
+            }
+            //获取电话号码和email
+            for (NSInteger k = 0; k < valuesCount; k++) {
+                CFTypeRef value = ABMultiValueCopyValueAtIndex(valuesRef, k);
+                switch (j) {
+                    case 0: {// Phone number
+                        addressBook.tel = (__bridge NSString*)value;
+                        break;
+                    }
+                    case 1: {// Email
+                        addressBook.email = (__bridge NSString*)value;
+                        break;
+                    }
+                }
+                CFRelease(value);
+            }
+            CFRelease(valuesRef);
+        }
+        //将个人信息添加到数组中，循环完成后addressBookTemp中包含所有联系人的信息
+        [_addressBookTemp addObject:addressBook];
+        
+        
+        
+        if (abName) CFRelease(abName);
+        if (abLastName) CFRelease(abLastName);
+        if (abFullName) CFRelease(abFullName);
+    }
     
 }
 

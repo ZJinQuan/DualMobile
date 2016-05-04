@@ -180,6 +180,8 @@
     cell.selectedBackgroundView = view;
     cell.selectedBackgroundView.backgroundColor = RGBA(241, 145, 73, 0.1);
     
+    cell.highlighted = YES;
+    
     switch (_segmented.selectedSegmentIndex) {
         case 0:
             
