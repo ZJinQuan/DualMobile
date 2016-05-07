@@ -37,22 +37,26 @@
     self.messageTableView.backgroundColor = RGBA(250, 250, 250, 1);
     self.messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    //自定义cell
     [self.messageTableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:nil] forCellReuseIdentifier:@"MessageCell"];
     
     //设置导航栏的按钮
     [self initNavBarBtn];
-    
-    NSArray *segArr = [[NSArray alloc] initWithObjects:@"副卡1",@"副卡2", nil];
 
-    self.segmented = [[UISegmentedControl alloc] initWithItems:segArr];
-    
-    self.segmented.frame = CGRectMake(0, 0, 150, 30);
-    self.segmented.selectedSegmentIndex = 0;
     self.navigationItem.titleView = self.segmented;
     
     [self.segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
+}
+
+-(UISegmentedControl *)segmented{
     
+    NSArray *segArr = [[NSArray alloc] initWithObjects:@"副卡1",@"副卡2", nil];
     
+    _segmented = [[UISegmentedControl alloc] initWithItems:segArr];
+    _segmented.frame = CGRectMake(0, 0, 150, 30);
+    _segmented.selectedSegmentIndex = 0;
+    
+    return _segmented;
 }
 
 -(void) clickSwitch:(UISegmentedControl *)seg{
@@ -85,6 +89,7 @@
     
 }
 
+//这只导航栏
 -(void) initNavBarBtn{
     
     //编辑
@@ -107,6 +112,7 @@
     
 }
 
+//点击编辑
 -(void) clickEdit:(UIBarButtonItem *)sender{
 
     
