@@ -262,9 +262,11 @@
     
     if (tableView.tag == 4444) {
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        static NSString *cellIdentifier = @"cell";
         
-        if (cell == nil) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         }
         
@@ -275,7 +277,8 @@
         
         cell.textLabel.text = arr[indexPath.row];
         cell.textLabel.font = [UIFont systemFontOfSize:15];
-        
+ 
+        return cell;
     }else{
         
         ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactsCell"];
@@ -296,6 +299,7 @@
     }
     return nil;
 }
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
