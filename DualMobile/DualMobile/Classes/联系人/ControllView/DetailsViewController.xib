@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -133,6 +133,9 @@
                                 <constraint firstAttribute="height" constant="40" id="p6c-CH-2ca"/>
                             </constraints>
                             <state key="normal" image="contact_call"/>
+                            <connections>
+                                <action selector="clickDialTelephone:" destination="-1" eventType="touchUpInside" id="Ef4-zi-1gm"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96b-qe-QPP">
                             <rect key="frame" x="286" y="5" width="40" height="40"/>
@@ -141,6 +144,9 @@
                                 <constraint firstAttribute="width" constant="40" id="ZRu-Ur-h6m"/>
                             </constraints>
                             <state key="normal" image="contact_message"/>
+                            <connections>
+                                <action selector="clickSendMessage:" destination="-1" eventType="touchUpInside" id="6xH-kp-QC4"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="广东 深圳 移动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEo-5q-bae">
                             <rect key="frame" x="8" y="31" width="118" height="18"/>

@@ -61,10 +61,10 @@
     
 }
 #pragma mark 点击事件
--(void) titleButtonClick:(UIButton *) button {
+-(void) titleButtonClick:(UIButton *) sender {
     NSLog(@"%s",__func__);
     
-    UITableView *customView = [[UITableView alloc] initWithFrame:CGRectMake(5, 12, 150, 160)];
+    UITableView *customView = [[UITableView alloc] initWithFrame:CGRectMake(20, 12, 150, 160)];
 
     customView.tag = 4444;
     customView.bounces = NO;
@@ -75,7 +75,10 @@
     PopMenuView *men = [[PopMenuView alloc] initWithCustomView:customView];
     
     //显示的位置
-    [men showWithView:button];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGRect rect = [sender convertRect:sender.bounds toView:window];
+    
+    [men showWithView:sender andX:CGRectGetMidX(rect) andY:CGRectGetMaxY(rect) + 15];
 }
 
 

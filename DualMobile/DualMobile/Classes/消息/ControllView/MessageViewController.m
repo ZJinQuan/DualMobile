@@ -45,7 +45,7 @@
 
     self.navigationItem.titleView = self.segmented;
     
-    [self.segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
+//    [self.segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
 }
 
 -(UISegmentedControl *)segmented{
@@ -55,6 +55,8 @@
     _segmented = [[UISegmentedControl alloc] initWithItems:segArr];
     _segmented.frame = CGRectMake(0, 0, 150, 30);
     _segmented.selectedSegmentIndex = 0;
+    
+    [_segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
     
     return _segmented;
 }

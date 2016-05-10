@@ -1,9 +1,9 @@
 //
 //  PopMenuView.h
-//  新浪微末OC
+//  DualMobile
 //
-//  Created by QUAN on 15/11/25.
-//  Copyright © 2015年 QUAN. All rights reserved.
+//  Created by QUAN on 16/4/18.
+//  Copyright © 2016年 QUAN. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,6 +12,6 @@
 
 -(instancetype) initWithCustomView: (UIView *)customView;
 
--(void) showWithView: (UIView *)targetView;
+-(void)showWithView:(UIView *)targetView andX :(CGFloat) orighX andY:(CGFloat) orighY;
 
 @end

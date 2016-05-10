@@ -1,9 +1,9 @@
 //
 //  PopMenuView.m
-//  新浪微末OC
+//  DualMobile
 //
-//  Created by QUAN on 15/11/25.
-//  Copyright © 2015年 QUAN. All rights reserved.
+//  Created by QUAN on 16/4/18.
+//  Copyright © 2016年 QUAN. All rights reserved.
 //
 
 #import "PopMenuView.h"
@@ -30,6 +30,7 @@
         //设置可以接收用户的点击事件
         imageView.userInteractionEnabled = YES;
         imageView.image = image;
+        
         imageView.size = CGSizeMake(customView.width + 10, customView.height + 20);
         
         customView.x = 5;
@@ -40,24 +41,23 @@
         [self addSubview:imageView];
         self.bgView = imageView;
 
+        self.backgroundColor = RGBA(184, 184, 184, 0.5);
+        
+        
     }
     
     return self;
 }
 
--(void)showWithView:(UIView *)targetView{
+-(void)showWithView:(UIView *)targetView andX :(CGFloat) orighX andY:(CGFloat) orighY{
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    //把button的坐标转换到屏幕坐标
-    //    __ convertRect:__ toView:__
-    CGRect rect = [targetView convertRect:targetView.bounds toView:window];
     
-    self.bgView.centerX = CGRectGetMidX(rect);
-    self.bgView.y = CGRectGetMaxY(rect);
-    
+    self.bgView.centerX = orighX;
+    self.bgView.y = orighY;
+
     [window addSubview:self];
     
-
 }
 
 //是视图隐藏
