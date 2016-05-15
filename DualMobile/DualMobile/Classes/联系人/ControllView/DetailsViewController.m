@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneNum;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
+@property (nonatomic, strong) UIView *dialView;
+@property (nonatomic, strong) UIView *messageView;
 @end
 
 @implementation DetailsViewController
@@ -32,8 +34,37 @@
     
 }
 
+-(UIView *)dialView{
+    
+    
+    if (_dialView == nil) {
+      
+        _dialView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 40)];
+        
+        _dialView.backgroundColor = [UIColor yellowColor];
+        
+    }
+
+    return _dialView;
+}
+
 //拨打电话
 - (IBAction)clickDialTelephone:(UIButton *)sender {
+    
+//    UIView *dialView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 40)];
+//    
+//    dialView.backgroundColor = [UIColor purpleColor];
+    
+    PopMenuView *popView = [[PopMenuView alloc] initWithCustomView:_dialView];
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGRect rect = [sender convertRect:sender.bounds toView:window];
+    
+    [popView showWithView:sender andX:rect.origin.x- sender.width andY:CGRectGetMaxY(rect)];
+}
+
+//发送信息
+- (IBAction)clickSendMessage:(UIButton *)sender {
     
     UIView *dialView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 40)];
     
@@ -44,11 +75,7 @@
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     CGRect rect = [sender convertRect:sender.bounds toView:window];
     
-    [popView showWithView:sender andX:CGRectGetMidX(rect) andY:CGRectGetMaxY(rect) + 10];
-}
-
-//发送信息
-- (IBAction)clickSendMessage:(UIButton *)sender {
+    [popView showWithView:sender andX:rect.origin.x- sender.width andY:CGRectGetMaxY(rect)];
 }
 
 @end
