@@ -263,16 +263,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
+    
     if (tableView.tag == 4444) {
         
         static NSString *cellIdentifier = @"cell";
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         
+        
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         }
-        
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -286,7 +287,11 @@
         
         ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactsCell"];
         
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UIView *view = [[UIView alloc] initWithFrame:cell.frame];
+        
+        cell.selectedBackgroundView = view;
+        
+        cell.selectedBackgroundView.backgroundColor = RGBA(241, 145, 73, 0.1);
         
         AddressBookModel *model = _dataSource[indexPath.row];
         
@@ -407,11 +412,8 @@
         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
         
         
-    }
-    
-    else
+    }else{
         
-    {
         addressBooks = ABAddressBookCreate();
         
     }

@@ -50,13 +50,17 @@
 
 -(UISegmentedControl *)segmented{
     
-    NSArray *segArr = [[NSArray alloc] initWithObjects:@"副卡1",@"副卡2", nil];
-    
-    _segmented = [[UISegmentedControl alloc] initWithItems:segArr];
-    _segmented.frame = CGRectMake(0, 0, 150, 30);
-    _segmented.selectedSegmentIndex = 0;
-    
-    [_segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
+    if (_segmented == nil) {
+
+        NSArray *segArr = [[NSArray alloc] initWithObjects:@"副卡1",@"副卡2", nil];
+        
+        _segmented = [[UISegmentedControl alloc] initWithItems:segArr];
+        _segmented.frame = CGRectMake(0, 0, 150, 30);
+        _segmented.selectedSegmentIndex = 0;
+        
+        [_segmented addTarget:self action:@selector(clickSwitch:) forControlEvents:UIControlEventValueChanged];
+        
+    }
     
     return _segmented;
 }
@@ -116,8 +120,7 @@
 
 //点击编辑
 -(void) clickEdit:(UIBarButtonItem *)sender{
-
-    
+ 
     if (self.messageTableView.editing) {
         
         sender.title = @"编辑";
