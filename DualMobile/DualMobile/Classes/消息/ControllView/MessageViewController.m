@@ -35,7 +35,7 @@
     self.messageTableView.dataSource = self;
     self.messageTableView.delegate = self;
     self.messageTableView.backgroundColor = RGBA(250, 250, 250, 1);
-    self.messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //自定义cell
     [self.messageTableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:nil] forCellReuseIdentifier:@"MessageCell"];
@@ -155,6 +155,9 @@
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.1;
+}
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert;

@@ -31,7 +31,6 @@
     [rightBtn setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
     
     self.navigationItem.rightBarButtonItem = rightBtn;
-    
 }
 
 //注册

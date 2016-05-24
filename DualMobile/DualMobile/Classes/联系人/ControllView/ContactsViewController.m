@@ -129,9 +129,6 @@
         NSLog(@"编辑");
         
     }
-    
-    
-    
 }
 
 -(void) clickAdd{
@@ -185,7 +182,7 @@
 
 - (UITableView *)friendTableView {
     if (!_friendTableView) {
-        _friendTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.searchBar.height, kScreenWidth, kScreenHeight - 108) style:UITableViewStylePlain];
+        _friendTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.searchBar.height, kScreenWidth, kScreenHeight - 108) style:UITableViewStyleGrouped];
         _friendTableView.delegate = self;
         _friendTableView.dataSource = self;
         [_friendTableView registerNib:[UINib nibWithNibName:@"ContactsCell" bundle:nil] forCellReuseIdentifier:@"ContactsCell"];
@@ -204,6 +201,9 @@
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.1;
+}
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert;
